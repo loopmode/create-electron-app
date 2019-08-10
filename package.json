@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "name": "@loopmode/create-electron-app-workspace",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:loopmode/create-electron-app.git",
+  "author": "Jovica Aleksic <jovica.aleksic@loopmode.de>",
+  "license": "MIT",
+  "scripts": {
+    "build": "lerna run build --parallel --stream"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "lerna": "^3.16.4",
+    "prettier": "^1.18.2",
+    "typescript": "^3.5.3"
+  }
+}

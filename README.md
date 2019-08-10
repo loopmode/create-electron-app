@@ -2,20 +2,20 @@
 
 ## Roadmap
 
-### 0.0.0 setup
+### 0.0.0 - setup
 
-- monorepo
-- workspaces
-- typescript
-- yeoman
+-   monorepo/lerna
+-   workspaces
+-   typescript
+-   yeoman
 
 ### 0.1.0 - packages
 
-- setup local development
-- setup local testing of CLI
-- setup "questions and CLI options" system
-- use a single template `electron-webpack-quick-start`
-- publish 0.1.0 on npm and test
+-   setup local development
+-   setup local testing of CLI
+-   setup "questions and CLI options" system
+-   use a single template `electron-webpack-quick-start`
+-   publish 0.1.0 on npm and test
 
 ### 0.2.0 - options
 
@@ -23,37 +23,42 @@ Add questions and CLI options
 
 for basics
 
-- `--name`
+-   `--name`
 
 for supported add-ons
 
-- `--nunjucks`
-- `--ejs`
-- `--sass`
-- `--less`
-- `--typescript`
-- `--eslint`
-- `--build-notifications`
+-   `--nunjucks`
+-   `--ejs`
+-   `--sass`
+-   `--less`
+-   `--typescript`
+-   `--eslint`
+-   `--build-notifications`
 
 for customization
 
-- `--webpack`
+-   `--webpack`
 
-### 0.3.0 workspaces
+### 0.3.0 - workspaces
 
 Add questions and options for whether to use workspaces
 
-- `--workspaces`
-  - `--lerna`
+-   `--workspaces`
+    -   `--lerna`
 
-### 0.4.0 templates
+### 0.4.0 - templates
 
 Add custom templates with a resonable basic setup
 
-- custom templates
-- `--vue`
-- `--react`
-  - `--react-router`
-  - `[--cra]` if workspaces were selected
+-   custom templates
+-   `--vue`
+-   `--react`
+    -   `--react-router`
+    -   `[--cra]` if workspaces were selected
 
-# 1.0.0
+### 1.0.0 - publish
+
+-   medium article
+-   electron-webpack community
+-   echojs post
+-   fullstacknews

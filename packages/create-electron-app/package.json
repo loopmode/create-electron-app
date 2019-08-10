@@ -1,0 +1,26 @@
+{
+  "name": "@loopmode/create-electron-app",
+  "version": "0.0.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loopmode/create-electron-app.git",
+    "directory": "packages/create-electron-app"
+  },
+  "files": [
+    "lib/generators"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "electron",
+    "webpack"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "dependencies": {
+    "yeoman-generator": "^4.0.1"
+  }
+}
