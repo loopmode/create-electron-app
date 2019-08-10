@@ -56,9 +56,23 @@ Add custom templates with a resonable basic setup
     -   `--react-router`
     -   `[--cra]` if workspaces were selected
 
-### 1.0.0 - publish
+### 0.5.0 - documentation
 
--   medium article
--   electron-webpack community
--   echojs post
--   fullstacknews
+-   compile proper documentation, probably markdown-based
+-   setup github pages
+
+### 1.0.0 - prerelease
+
+-   Tests?
+-   READMEs look good on npm
+-   everything works well
+
+### 1.0.0 - release
+
+-   publish 1.0.0 on npm
+-   create git tag
+-   create medium article
+-   inform electron-webpack community
+-   post on echojs
+-   post on fullstacknews
+-   post on hackernews
