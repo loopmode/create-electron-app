@@ -7,7 +7,9 @@
   "author": "Jovica Aleksic <jovica.aleksic@loopmode.de>",
   "license": "MIT",
   "scripts": {
-    "build": "lerna run build --parallel --stream"
+    "build": "lerna run build --stream",
+    "rebuild": "rm -rf packages/**/lib && rm -f packages/**/.tsbuildinfo && yarn build",
+    "watch": "lerna run watch --parallel --stream"
   },
   "workspaces": {
     "packages": [
