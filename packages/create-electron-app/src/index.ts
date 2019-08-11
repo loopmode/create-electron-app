@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import runGenerator from '@loopmode/generator-electron-app/src/run';
+import runGenerator from '@loopmode/generator-electron-app/lib/run';
 
 runGenerator();
