@@ -31,27 +31,26 @@ See [@loopmode/generator-electron-app](https://www.npmjs.com/package/@loopmode/g
 -   setup local testing of CLI
 -   setup "questions and CLI options" system
 -   use a single template `electron-webpack-quick-start`
--   provide `create-electron-app`
--   provide `generator-electron-app`
 -   publish 0.1.0 on npm and test
+    -   publish `create-electron-app` package
+    -   publish `generator-electron-app` package
+-   Basic arguments and options
+    -   `projectName` argument
+    -   `--yes` option
+    -   `--yarn` option
+    -   `--install` option
 
 ### 0.2.0 - options
 
-Add questions and CLI options
+for `electron-webpack` add-ons
 
-for basics
-
--   `--name`
-
-for supported add-ons
-
--   `--nunjucks`
--   `--ejs`
--   `--sass`
--   `--less`
--   `--typescript`
--   `--eslint`
 -   `--build-notifications`
+-   `--ejs`
+-   `--eslint`
+-   `--less`
+-   `--nunjucks`
+-   `--sass`
+-   `--typescript`
 
 for customization
 
