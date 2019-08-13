@@ -8,6 +8,9 @@
     "dist": "yarn compile && electron-builder",
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
   },
+  "resolutions": {
+    "js-yaml": "3.13.1"
+  },
   "dependencies": {
     "source-map-support": "^0.5.12"
   },
