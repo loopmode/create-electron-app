@@ -14,7 +14,7 @@
   "files": [
     "lib/generators",
     "lib/utils",
-    "lib/run.ts",
+    "lib/run.js",
     "templates"
   ],
   "keywords": [
