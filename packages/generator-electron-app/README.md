@@ -1,20 +1,55 @@
-# @loopmode/create-electron-app
+# @loopmode/generator-electron-app
 
-Initializer package for creating `electron-webpack` applications
+Yeoman generator for [@loopmode/create-electron-app](https://www.npmjs.com/package/@loopmode/create-electron-app).
 
-## Usage
+### Arguments
 
-Use `yarn create` with this package to initialize a new project:
+#### `projectName`
+
+Name for the new project and its folder.
+In interactive mode, this will be the default for the `projectName` question.  
+If you want to use the `--yes` option non-interactive mode, this argument is required.
+
+Example:
 
 ```
-yarn create @loopmode/electron-app
+yarn create @loopmode/electron-project my-project
 ```
 
-Alternatively, you can use `npm init @loopmode/electron-app --no-yarn`. However, future versions will provide a `--workspaces` option that is incompatible with `npm`.
+### Options
 
-### Arguments and options
+#### `--yes`
 
-See [@loopmode/generator-electron-app](https://www.npmjs.com/package/@loopmode/generator-electron-app) for CLI arguments and options
+Short: `-y`
+
+Skips interactive questions and uses defaults instead.
+Only available if you provided the `projectName` argument.
+
+Example:
+
+```
+yarn create @loopmode/electron-project empty-project --no-install --yes
+```
+
+#### `--yarn` (default: `true`)
+
+Whether to use `yarn` instead of `npm`.
+Use `--no-yarn` to omit.
+
+Example:
+
+```
+npm init @loopmode/electron-project --no-yarn
+```
+
+#### `--install` (default: `true`)
+
+Whether to install the dependencies after creating the project.
+Use `--no-install` to omit.
+
+```
+npm init @loopmode/electron-project --no-install
+```
 
 ## Roadmap
 
