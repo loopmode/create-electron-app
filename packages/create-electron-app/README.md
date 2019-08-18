@@ -40,7 +40,7 @@ See [@loopmode/generator-electron-app](https://www.npmjs.com/package/@loopmode/g
     -   `--yarn` option
     -   `--install` option
 
-### 0.2.0 - options
+### ✅ 0.2.0 - options
 
 for `electron-webpack` add-ons
 
