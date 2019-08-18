@@ -1,6 +1,6 @@
 {
   "name": "@loopmode/create-electron-app",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "lib/index.js",
   "bin": "lib/index.js",
   "license": "MIT",
@@ -22,7 +22,7 @@
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "@loopmode/generator-electron-app": "^0.2.0"
+    "@loopmode/generator-electron-app": "^0.2.1"
   },
   "gitHead": "8f1a9e43a6f0a8a0a9fc46b5e4f7c5bb6213a9ed"
 }
