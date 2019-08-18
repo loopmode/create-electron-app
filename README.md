@@ -9,7 +9,9 @@ This project uses yarn workspaces. Development is incompatible with npm and you 
 Install the dependencies in the project root folder:
 
 ```
-yarn install
+git clone git@github.com:loopmode/create-electron-app.git
+cd create-electron-app
+yarn
 ```
 
 ## Usage

@@ -9,7 +9,8 @@
   "scripts": {
     "build": "lerna run build --stream",
     "rebuild": "rm -rf packages/**/lib && rm -f packages/**/.tsbuildinfo && yarn build",
-    "watch": "lerna run watch --parallel --stream"
+    "watch": "lerna run watch --parallel --stream",
+    "test": "rm -rf foo && cross-env DEBUG=yeoman:generator packages/create-electron-app/lib/index.js foo -y"
   },
   "workspaces": {
     "packages": [
@@ -17,6 +18,7 @@
     ]
   },
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "eslint": "^6.1.0",
     "lerna": "^3.16.4",
     "prettier": "^1.18.2",

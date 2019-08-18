@@ -61,10 +61,7 @@ export function splitName(name: string): PackageDescriptor {
  * @param {string} options.packageScope
  * @param {string} options.packageName
  */
-export function joinName({
-    packageName,
-    packageScope
-}: PackageDescriptor): string {
+export function joinName({ packageName, packageScope }: PackageDescriptor): string {
     if (!packageName) {
         throw new Error('packageName is required');
     }
@@ -81,15 +78,10 @@ export function joinName({
  * @param {string} [PREFIX='generator-'] The prefix to ensure
  * @return {string} a generator name suitable for usage with yeoman
  */
-export function getGeneratorPackageName(
-    name: string,
-    PREFIX: string = 'generator-'
-): string {
+export function getGeneratorPackageName(name: string, PREFIX: string = 'generator-'): string {
     let { packageScope, packageName } = splitName(name);
 
-    packageName = packageName.startsWith(PREFIX)
-        ? packageName
-        : `${PREFIX}${packageName}`;
+    packageName = packageName.startsWith(PREFIX) ? packageName : `${PREFIX}${packageName}`;
 
     return normalize(joinName({ packageScope, packageName }));
 }
@@ -101,10 +93,7 @@ export function getGeneratorPackageName(
  * @param {string} [PREFIX='generator-'] The prefix to remove
  * @return {string} a regular package name
  */
-export function getGeneratorYoName(
-    name: string,
-    PREFIX: string = 'generator-'
-): string {
+export function getGeneratorYoName(name: string, PREFIX: string = 'generator-'): string {
     name = getGeneratorPackageName(name);
     name = name.replace(PREFIX, '');
     return name;
@@ -125,11 +114,7 @@ export function getGeneratorNames(name: string): GeneratorDescriptor {
  * @param {array} generatorArgs An array of string arguments for the generator
  * @param {*} yo A yeoman environment created via `require('yeoman-environment').createEnv()`
  */
-export function runGenerator(
-    generatorName: string,
-    generatorArgs: string[] = [],
-    yo: yoenv
-): Promise<unknown | Error> {
+export function runGenerator(generatorName: string, generatorArgs: string[] = [], yo: yoenv): Promise<unknown | Error> {
     return new Promise((resolve, reject) => {
         try {
             yo.lookup(() => yo.run([generatorName, ...generatorArgs], resolve));
@@ -170,10 +155,7 @@ export async function isPackageInstalled(name: string): Promise<boolean> {
  * @param {string} name The name of the package to install. May contain a specific version.
  * @param {boolean} force Whether to install the package again even when it is already installed
  */
-export async function installPackage(
-    name: string,
-    force: boolean
-): Promise<void | Error> {
+export async function installPackage(name: string, force: boolean): Promise<void | Error> {
     if (!force && (await isPackageInstalled(name))) {
         console.log(`>> package ${name} is already installed`);
         return;
@@ -183,10 +165,7 @@ export async function installPackage(
     await run(`npm install --global ${name}`);
 }
 
-export function joinAuthor({
-    authorName,
-    authorEmail
-}: AuthorDescriptor): string {
+export function joinAuthor({ authorName, authorEmail }: AuthorDescriptor): string {
     if (authorName && authorEmail) {
         return `${authorName} <${authorEmail}>`;
     }

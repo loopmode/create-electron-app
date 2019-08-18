@@ -7,13 +7,12 @@
 /**
  * Delimiters - special character sequences used in the conditional syntax
  */
-const D = {
+export const Delimiters = {
     VARNAME_START: '%',
     BOOLEAN_AND: ' && ',
     TERNARY_AND: ' == ',
     TERNARY_OR: ' !! '
 };
-export { D as Delimiters };
 
 /**
  * The regular expression to check whether a given name contains conditional syntax
@@ -24,7 +23,7 @@ export { D as Delimiters };
  * - index.%varname == .ts ## .js
  */
 export const DEFAULT_CONDITIONAL_SYNTAX_REGEXP = new RegExp(
-    `(.*)${D.VARNAME_START}(.*)(${D.BOOLEAN_AND}|${D.TERNARY_AND})(.*)(?:${D.TERNARY_OR})?(.*)?`
+    `(.*)${Delimiters.VARNAME_START}(.*)(${Delimiters.BOOLEAN_AND}|${Delimiters.TERNARY_AND})(.*)(?:${Delimiters.TERNARY_OR})?(.*)?`
 );
 
 /**
@@ -37,7 +36,7 @@ export const DEFAULT_CONDITIONAL_SYNTAX_REGEXP = new RegExp(
  */
 export const DEFAULT_CREATE_IGNORE_GLOBS = (key: string, value: unknown) => {
     const varname = value ? `!${key}` : key;
-    const glob = `**/*${D.VARNAME_START}${varname}${D.BOOLEAN_AND}*`;
+    const glob = `**/*${Delimiters.VARNAME_START}${varname}${Delimiters.BOOLEAN_AND}*`;
     return [glob, `${glob}/*`];
 };
 
@@ -49,10 +48,7 @@ export const DEFAULT_CREATE_IGNORE_GLOBS = (key: string, value: unknown) => {
  * @param {*} context - An object with key/value pairs of available template variables
  * @param {*} [createGlob] - A `(key:string, value:any):string|string[]` function that takes a variable and returns a glob
  */
-export function getConditionalSyntaxIgnoreGlobs(
-    context: {},
-    createGlob = DEFAULT_CREATE_IGNORE_GLOBS
-): string[] {
+export function getConditionalSyntaxIgnoreGlobs(context: {}, createGlob = DEFAULT_CREATE_IGNORE_GLOBS): string[] {
     return Object.entries(context).reduce((result: string[], [key, value]) => {
         const globs = createGlob(key, value);
         return [...result, ...(Array.isArray(globs) ? globs : [globs])];

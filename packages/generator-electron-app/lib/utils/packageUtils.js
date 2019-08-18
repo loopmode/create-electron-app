@@ -51,9 +51,7 @@ function joinName({ packageName, packageScope }) {
 exports.joinName = joinName;
 function getGeneratorPackageName(name, PREFIX = 'generator-') {
     let { packageScope, packageName } = splitName(name);
-    packageName = packageName.startsWith(PREFIX)
-        ? packageName
-        : `${PREFIX}${packageName}`;
+    packageName = packageName.startsWith(PREFIX) ? packageName : `${PREFIX}${packageName}`;
     return normalize(joinName({ packageScope, packageName }));
 }
 exports.getGeneratorPackageName = getGeneratorPackageName;

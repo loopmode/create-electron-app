@@ -1,0 +1,1 @@
+{"version":3,"file":"createTransformStream.d.ts","sourceRoot":"","sources":["../../../src/utils/rename-transform/createTransformStream.ts"],"names":[],"mappings":";AACA,OAAO,EAAE,aAAa,EAAwC,MAAM,aAAa,CAAC;AASlF,MAAM,CAAC,OAAO,UAAU,oBAAoB,CAAC,OAAO,EAAE,EAAE,EAAE,UAAU,EAAE,aAAa,EAAE,GAAG,MAAM,CAAC,eAAe,CAI7G"}

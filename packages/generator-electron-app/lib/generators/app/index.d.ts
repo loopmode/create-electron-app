@@ -1,2 +1,2 @@
-export { default } from './Generator';
+export { default } from './EWAGenerator';
 //# sourceMappingURL=index.d.ts.map
