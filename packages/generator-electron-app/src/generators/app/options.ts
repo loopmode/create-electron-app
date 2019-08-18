@@ -4,68 +4,69 @@ export const options: GeneratorOption[] = [
     {
         name: 'yes',
         alias: 'y',
+        default: false,
         type: Boolean,
-        description: 'Skip questions and use default values'
+        description: 'Skip questions and use default values?'
     },
     {
         name: 'install',
         alias: 'i',
         default: true,
         type: Boolean,
-        description: 'Install dependencies afterwards'
+        description: 'Install dependencies after setup?'
     },
     {
         name: 'yarn',
         default: true,
         type: Boolean,
-        description: 'Use yarn instead of npm'
+        description: 'Use yarn instead of npm?'
     },
     {
         name: 'webpack',
         default: true,
         type: Boolean,
-        description: 'Use custom webpack configuration'
+        description: 'webpack: Use custom configuration override?'
     },
     {
         name: 'eslint',
         default: true,
         type: Boolean,
-        description: 'Add support for script file linting using eslint'
+        description: 'eslint: Add support for script file linting using eslint?'
     },
     {
         name: 'typescript',
         default: false,
         type: Boolean,
-        description: 'Add support for compiling TypeScript script files'
+        description: 'typescript: Add support for compiling TypeScript script files?'
     },
     {
         name: 'notifications',
         default: false,
         type: Boolean,
-        description: 'Provide OS-level notifications from webpack during development'
+        description: 'notifications: Provide OS-level notifications from webpack during development?'
     },
     {
         name: 'ejs',
         default: false,
         type: Boolean,
-        description: 'Add support for compiling EJS template files'
+        description: 'ejs: Add support for compiling EJS template files?'
     },
     {
         name: 'nunjucks',
         default: false,
         type: Boolean,
-        description: 'Add support for compiling Nunjucks template files'
+        description: 'Add snunjucks: upport for compiling Nunjucks template files?'
     },
     {
         name: 'less',
         default: false,
         type: Boolean,
-        description: 'Add support for compiling Less style files'
+        description: 'less: Add support for compiling Less style files?'
     },
     {
         name: 'sass',
         default: false,
         type: Boolean,
-        description: 'Add support for compiling Sass/SCSS style files'
+        description: 'sass: Add support for compiling Sass/SCSS style files?'
     }
 ];

@@ -5,11 +5,9 @@ export declare type PathTransform = (path: ParsedPath, variable?: VariableTuple,
 export declare type PathVariableTransform = [PathTransform, VariableTuple];
 export interface RunGeneratorOptions {
     argv?: string[];
-    ownArgs?: string[];
 }
 export interface EWAGeneratorOptions {
     projectName?: string;
-    projectNameCC?: string;
     yes?: boolean;
     install?: boolean;
     yarn?: boolean;
@@ -21,6 +19,7 @@ export interface EWAGeneratorOptions {
     nunjucks?: boolean;
     webpack?: boolean;
     notifications?: boolean;
+    projectNameCC?: string;
 }
 export interface GeneratorOption extends OptionConfig {
     name: string;

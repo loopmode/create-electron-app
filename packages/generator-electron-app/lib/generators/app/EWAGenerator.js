@@ -42,10 +42,8 @@ class EWAGenerator extends yeoman_generator_1.default {
             const options = this.options;
             const cliValues = Object.assign({}, options);
             const questionDefaults = Object.assign({}, cliValues, { projectName: options.projectName });
-            const answerValues = cliValues.projectName && cliValues.yes
-                ? questionsUtils_1.getAnswers(questionDefaults)
-                : yield this.prompt(questionsUtils_1.getQuestions(questionDefaults));
-            this.props = questionsUtils_1.addComputedOptions(answerValues);
+            const userOptions = yield questionsUtils_1.getAnswers(this, cliValues, questionDefaults);
+            this.props = questionsUtils_1.addComputedOptions(userOptions);
             this.destinationRoot(this.props.projectName);
         });
     }

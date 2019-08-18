@@ -5,7 +5,7 @@ import Generator from 'yeoman-generator';
 import { EWAGeneratorOptions } from '../../types';
 import { getBinaryFiles, getBinaryIgnoreGlobs } from '../../utils/binaryUtils';
 import { getConditionalSyntaxIgnoreGlobs as getConditionalIgnoreGlobs } from '../../utils/conditionalSyntax';
-import { initOptions, getQuestions, getAnswers, addComputedOptions } from '../../utils/questionsUtils';
+import { initOptions, addComputedOptions, getAnswers } from '../../utils/questionsUtils';
 import * as renameTransform from '../../utils/rename-transform';
 
 const { name, version } = require('../../../package.json');
@@ -38,12 +38,9 @@ export default class EWAGenerator extends Generator {
             projectName: options.projectName
         };
 
-        const answerValues: EWAGeneratorOptions =
-            cliValues.projectName && cliValues.yes
-                ? getAnswers(questionDefaults) // either use the default values
-                : await this.prompt(getQuestions(questionDefaults)); // or ask the user
+        const userOptions: EWAGeneratorOptions = await getAnswers(this, cliValues, questionDefaults);
 
-        this.props = addComputedOptions(answerValues);
+        this.props = addComputedOptions(userOptions);
         this.destinationRoot(this.props.projectName);
     }
     writing() {

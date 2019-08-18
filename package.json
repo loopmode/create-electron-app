@@ -10,7 +10,7 @@
     "build": "lerna run build --stream",
     "rebuild": "rm -rf packages/**/lib && rm -f packages/**/.tsbuildinfo && yarn build",
     "watch": "lerna run watch --parallel --stream",
-    "test": "rm -rf foo && cross-env DEBUG=yeoman:generator packages/create-electron-app/lib/index.js foo -y"
+    "test": "rm -rf foo && cross-env DEBUG=yeoman:generator packages/create-electron-app/lib/index.js"
   },
   "workspaces": {
     "packages": [

@@ -1,7 +1,7 @@
 import { EWAGeneratorOptions } from '../types';
 
 import { options } from '../generators/app/options';
-import Generator, { Question } from 'yeoman-generator';
+import Generator, { Question, Answers } from 'yeoman-generator';
 import camelcase = require('camelcase');
 
 const validators = {
@@ -11,10 +11,15 @@ const validators = {
 };
 
 export function initOptions(generator: Generator) {
-    options.forEach(({ name, ...option }) => generator.option(name, option));
+    options.forEach(({ name, ...option }) => {
+        if (name.endsWith('?')) {
+            name = name.substr(0, name.length - 1);
+        }
+        generator.option(name, option);
+    });
 }
 
-export function getQuestions(values: EWAGeneratorOptions): Question[] {
+function getQuestions(values: EWAGeneratorOptions): Question[] {
     const typeMap: Record<string, string> = {
         Boolean: 'confirm'
     };
@@ -37,17 +42,6 @@ export function getQuestions(values: EWAGeneratorOptions): Question[] {
     ];
 }
 
-export function getAnswers(options: EWAGeneratorOptions): EWAGeneratorOptions {
-    const values = options as Record<string, string>;
-    return getQuestions(values).reduce((result, question) => {
-        const name = question.name as string;
-        return {
-            ...result,
-            [name]: values[name] || question.default
-        };
-    }, {}) as EWAGeneratorOptions;
-}
-
 /**
  * Adds custom or computed values to those provided by the user
  * @param options given yo questions and answers
@@ -58,4 +52,68 @@ export function addComputedOptions(options: EWAGeneratorOptions): EWAGeneratorOp
         ...options,
         projectNameCC: camelcase(options.projectName as string)
     };
+}
+
+export async function getAnswers(
+    generator: Generator,
+    cliValues: EWAGeneratorOptions,
+    defaults: EWAGeneratorOptions
+): Promise<EWAGeneratorOptions> {
+    const result: EWAGeneratorOptions = {
+        projectName: cliValues.projectName
+    };
+
+    function getDefaultAnswers(): Answers {
+        return questions.reduce((result, question) => {
+            const name = question.name as string;
+            const value = (defaults as any)[name] || question.default;
+            if (value === undefined) {
+                return result;
+            }
+            return {
+                ...result,
+                [name]: value
+            };
+        }, {});
+    }
+
+    // attention: questions array gets mutated later on
+    // (we splice some questions out of it)
+    const questions = getQuestions(defaults);
+
+    if (cliValues.projectName && cliValues.yes) {
+        // earliest exit: projectName is given, yes is specified; use defaults
+        return Object.assign(result, getDefaultAnswers());
+    }
+
+    {
+        const nameQuestion = questions.find(question => question.name === 'projectName');
+        if (nameQuestion) {
+            // pluck projectName from array so user won't have to answer again later
+            questions.splice(questions.indexOf(nameQuestion), 1);
+        }
+
+        if (nameQuestion && !result.projectName) {
+            // promt for projectName if it was not specified via CLI already
+            const answers = await generator.prompt(nameQuestion);
+            result.projectName = answers.projectName;
+        }
+    }
+
+    {
+        const yesQuestion = questions.find(question => question.name === 'yes');
+        if (yesQuestion) {
+            // pluck yes from array so user won't have to answer again later
+            questions.splice(questions.indexOf(yesQuestion), 1);
+            // however, ask the user whether he wants to skip questions and use defaults
+            const answers = await generator.prompt({ ...yesQuestion, default: true });
+            if (answers.yes) {
+                return Object.assign(result, getDefaultAnswers());
+            }
+        }
+    }
+
+    // user chose to answer all (remaining) questions manually
+    const userAnswers = await generator.prompt(questions);
+    return Object.assign(result, userAnswers);
 }

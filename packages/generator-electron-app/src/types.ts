@@ -18,11 +18,9 @@ export type PathVariableTransform = [PathTransform, VariableTuple];
 
 export interface RunGeneratorOptions {
     argv?: string[];
-    ownArgs?: string[];
 }
 export interface EWAGeneratorOptions {
     projectName?: string;
-    projectNameCC?: string;
     yes?: boolean;
     install?: boolean;
     yarn?: boolean;
@@ -37,6 +35,8 @@ export interface EWAGeneratorOptions {
     // misc
     webpack?: boolean;
     notifications?: boolean;
+    // computed values
+    projectNameCC?: string;
 }
 
 export interface GeneratorOption extends OptionConfig {

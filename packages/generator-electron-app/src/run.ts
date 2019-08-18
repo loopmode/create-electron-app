@@ -1,9 +1,9 @@
 import YoEnv from 'yeoman-environment';
 import { RunGeneratorOptions } from './types';
 
-export default async function run({ argv = process.argv.slice(), ownArgs = ['--force'] }: RunGeneratorOptions = {}) {
+export default async function run({ argv = process.argv.slice() }: RunGeneratorOptions = {}) {
     try {
-        const args = argv.slice(2).filter(arg => !ownArgs.includes(arg));
+        const args = argv.slice(2);
         const env = YoEnv.createEnv();
         await runGenerator('@loopmode/electron-app', args, env);
 

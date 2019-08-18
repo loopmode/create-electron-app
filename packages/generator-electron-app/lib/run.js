@@ -12,10 +12,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const yeoman_environment_1 = __importDefault(require("yeoman-environment"));
-function run({ argv = process.argv.slice(), ownArgs = ['--force'] } = {}) {
+function run({ argv = process.argv.slice() } = {}) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const args = argv.slice(2).filter(arg => !ownArgs.includes(arg));
+            const args = argv.slice(2);
             const env = yeoman_environment_1.default.createEnv();
             yield runGenerator('@loopmode/electron-app', args, env);
             process.exit(0);
