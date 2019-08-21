@@ -18,9 +18,9 @@ module.exports = {
       version: 'detect'
     }
   },<% } %>
-  rules: {
+  rules: {<%if (react) { %>
     // allow anonymous component functions
-    'react/display-name': 0,
+    'react/display-name': 0,<% } %>
     // allow spreading out properties from an object without warnings
     'no-unused-vars': [1, { ignoreRestSiblings: true }]
   }
