@@ -29,6 +29,8 @@ export interface EWAGeneratorOptions {
     eslint?: boolean;
     less?: boolean;
     sass?: boolean;
+    // frameworks
+    react?: boolean;
     // templates
     ejs?: boolean;
     nunjucks?: boolean;
@@ -37,9 +39,13 @@ export interface EWAGeneratorOptions {
     notifications?: boolean;
     // computed values
     projectNameCC?: string;
+    // internal values
+    electronWebpackConfig?: boolean;
+    defaultRendererTemplate?: boolean;
 }
 
 export interface GeneratorOption extends OptionConfig {
+    internal?: boolean;
     name: string;
     type: BooleanConstructor | StringConstructor | NumberConstructor | undefined;
 }

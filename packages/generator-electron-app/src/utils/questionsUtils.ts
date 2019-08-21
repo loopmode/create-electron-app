@@ -1,9 +1,8 @@
 import { EWAGeneratorOptions } from '../types';
 
-import { options } from '../generators/app/options';
+import { options as appOptions } from '../generators/app/options';
 import Generator, { Question, Answers } from 'yeoman-generator';
 import camelcase = require('camelcase');
-
 const validators = {
     required(value: string): boolean | string {
         return value ? true : 'This field is required';
@@ -11,11 +10,11 @@ const validators = {
 };
 
 export function initOptions(generator: Generator) {
-    options.forEach(({ name, ...option }) => {
-        if (name.endsWith('?')) {
-            name = name.substr(0, name.length - 1);
+    appOptions.forEach(({ name, description, ...option }) => {
+        if (description && description.endsWith('?')) {
+            description = description.substr(0, description.length - 1);
         }
-        generator.option(name, option);
+        generator.option(name, { description, ...option });
     });
 }
 
@@ -31,14 +30,16 @@ function getQuestions(values: EWAGeneratorOptions): Question[] {
             default: values.projectName,
             validate: validators.required
         },
-        ...options.map(option => {
-            return {
-                name: option.name,
-                type: (option.type && typeMap[option.type.name]) || 'input',
-                default: (values as Record<string, any>)[option.name],
-                message: option.description
-            } as Question;
-        })
+        ...appOptions
+            .filter(option => !option.internal)
+            .map(option => {
+                return {
+                    name: option.name,
+                    type: (option.type && typeMap[option.type.name]) || 'input',
+                    default: (values as Record<string, any>)[option.name],
+                    message: option.description
+                } as Question;
+            })
     ];
 }
 
@@ -54,12 +55,18 @@ export function addComputedOptions(options: EWAGeneratorOptions): EWAGeneratorOp
     };
 }
 
+const defaultInternalOptions: EWAGeneratorOptions = {
+    electronWebpackConfig: false,
+    defaultRendererTemplate: true
+};
+
 export async function getAnswers(
     generator: Generator,
     cliValues: EWAGeneratorOptions,
     defaults: EWAGeneratorOptions
 ): Promise<EWAGeneratorOptions> {
     const result: EWAGeneratorOptions = {
+        ...defaultInternalOptions,
         projectName: cliValues.projectName
     };
 
@@ -114,6 +121,37 @@ export async function getAnswers(
     }
 
     // user chose to answer all (remaining) questions manually
-    const userAnswers = await generator.prompt(questions);
+
+    const notInternal = (question: Question): boolean => {
+        const option = appOptions.find(o => o.name === question.name);
+        return !(option && option.internal);
+    };
+
+    const userAnswers = await generator.prompt(questions.filter(notInternal));
     return Object.assign(result, userAnswers);
+}
+
+export function applyImplicitOptions(options: EWAGeneratorOptions): EWAGeneratorOptions {
+    if (options.react) {
+        if (!options.webpack) logImplicitOverrides({ react: { webpack: true } });
+        options.webpack = true;
+        options.defaultRendererTemplate = false;
+    }
+    if (options.webpack) {
+        options.electronWebpackConfig = true;
+    }
+
+    return options;
+}
+
+function logImplicitOverrides(dependencies: Record<string, Record<string, unknown>>): void {
+    console.log('');
+    console.info('Overriding user choices:');
+    Object.entries(dependencies).forEach(([reason, overrides]) => {
+        console.info(`  - ${reason} requires`);
+        Object.entries(overrides).forEach(([override, value]) => {
+            console.info(`      - ${override}=${value}`);
+        });
+    });
+    console.log('');
 }

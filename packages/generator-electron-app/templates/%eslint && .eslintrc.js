@@ -1,6 +1,6 @@
 module.exports = {
-  /* your base configuration of choice */
-  extends: 'eslint:recommended',
+ 
+  extends: ['eslint:recommended'<%if (react) { %>, 'plugin:react/recommended'<% } %>],
 
   parser: 'babel-eslint',
   parserOptions: {
@@ -12,5 +12,16 @@ module.exports = {
   },
   globals: {
     __static: true
+  },<%if (react) { %>
+  settings: {
+    react: {
+      version: 'detect'
+    }
+  },<% } %>
+  rules: {
+    // allow anonymous component functions
+    'react/display-name': 0,
+    // allow spreading out properties from an object without warnings
+    'no-unused-vars': [1, { ignoreRestSiblings: true }]
   }
 }

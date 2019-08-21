@@ -28,11 +28,11 @@ const validators = {
 };
 function initOptions(generator) {
     options_1.options.forEach((_a) => {
-        var { name } = _a, option = __rest(_a, ["name"]);
-        if (name.endsWith('?')) {
-            name = name.substr(0, name.length - 1);
+        var { name, description } = _a, option = __rest(_a, ["name", "description"]);
+        if (description && description.endsWith('?')) {
+            description = description.substr(0, description.length - 1);
         }
-        generator.option(name, option);
+        generator.option(name, Object.assign({ description }, option));
     });
 }
 exports.initOptions = initOptions;
@@ -48,7 +48,9 @@ function getQuestions(values) {
             default: values.projectName,
             validate: validators.required
         },
-        ...options_1.options.map(option => {
+        ...options_1.options
+            .filter(option => !option.internal)
+            .map(option => {
             return {
                 name: option.name,
                 type: (option.type && typeMap[option.type.name]) || 'input',
@@ -62,11 +64,13 @@ function addComputedOptions(options) {
     return Object.assign({}, options, { projectNameCC: camelcase(options.projectName) });
 }
 exports.addComputedOptions = addComputedOptions;
+const defaultInternalOptions = {
+    electronWebpackConfig: false,
+    defaultRendererTemplate: true
+};
 function getAnswers(generator, cliValues, defaults) {
     return __awaiter(this, void 0, void 0, function* () {
-        const result = {
-            projectName: cliValues.projectName
-        };
+        const result = Object.assign({}, defaultInternalOptions, { projectName: cliValues.projectName });
         function getDefaultAnswers() {
             return questions.reduce((result, question) => {
                 const name = question.name;
@@ -101,9 +105,37 @@ function getAnswers(generator, cliValues, defaults) {
                 }
             }
         }
-        const userAnswers = yield generator.prompt(questions);
+        const notInternal = (question) => {
+            const option = options_1.options.find(o => o.name === question.name);
+            return !(option && option.internal);
+        };
+        const userAnswers = yield generator.prompt(questions.filter(notInternal));
         return Object.assign(result, userAnswers);
     });
 }
 exports.getAnswers = getAnswers;
+function applyImplicitOptions(options) {
+    if (options.react) {
+        if (!options.webpack)
+            logImplicitOverrides({ react: { webpack: true } });
+        options.webpack = true;
+        options.defaultRendererTemplate = false;
+    }
+    if (options.webpack) {
+        options.electronWebpackConfig = true;
+    }
+    return options;
+}
+exports.applyImplicitOptions = applyImplicitOptions;
+function logImplicitOverrides(dependencies) {
+    console.log('');
+    console.info('Overriding user choices:');
+    Object.entries(dependencies).forEach(([reason, overrides]) => {
+        console.info(`  - ${reason} requires`);
+        Object.entries(overrides).forEach(([override, value]) => {
+            console.info(`      - ${override}=${value}`);
+        });
+    });
+    console.log('');
+}
 //# sourceMappingURL=questionsUtils.js.map

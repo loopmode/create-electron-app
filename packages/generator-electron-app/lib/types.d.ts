@@ -15,13 +15,17 @@ export interface EWAGeneratorOptions {
     eslint?: boolean;
     less?: boolean;
     sass?: boolean;
+    react?: boolean;
     ejs?: boolean;
     nunjucks?: boolean;
     webpack?: boolean;
     notifications?: boolean;
     projectNameCC?: string;
+    electronWebpackConfig?: boolean;
+    defaultRendererTemplate?: boolean;
 }
 export interface GeneratorOption extends OptionConfig {
+    internal?: boolean;
     name: string;
     type: BooleanConstructor | StringConstructor | NumberConstructor | undefined;
 }
