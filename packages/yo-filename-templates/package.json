@@ -1,0 +1,41 @@
+{
+  "version": "0.0.1",
+  "name": "@loopmode/yo-filename-templates",
+  "description": "Support EJS template syntax in filenames",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:loopmode/create-electron-app.git",
+    "directory": "packages/yo-filename-templates"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "ejs",
+    "templates",
+    "conditional",
+    "filename",
+    "filesystem"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@types/ejs": "^2.6.3",
+    "@types/fs-extra": "^8.0.0",
+    "@types/gulp-rename": "^0.0.33",
+    "ejs": "^2.6.2",
+    "fs-extra": "^8.1.0",
+    "gulp-rename": "1.2.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.3"
+  }
+}
