@@ -7,8 +7,8 @@ Yeoman generator for [@loopmode/create-electron-app](https://www.npmjs.com/packa
 #### `projectName`
 
 Name for the new project and its folder.
-If you want to use the `--yes` option non-interactive mode, this argument is required.
-In interactive mode, this will be the default for the `projectName` question.
+If you want to use the `--yes` option silent mode, this argument is required.
+In interactive mode, this will be the default value for the `projectName` question.
 
 Example:
 
@@ -26,8 +26,8 @@ Prints a table of available options.
 
 Short: `-y`
 
-Skips interactive questions and uses defaults instead.
-Only available if you provided the `projectName` argument.
+Silent mode. Answer all questions with yes and use recommended defaults.
+Only available with `projectName` argument.
 
 Example:
 
@@ -48,7 +48,7 @@ npm init @loopmode/electron-project --no-yarn
 
 #### `--install` (default: `true`)
 
-Whether to install the dependencies after creating the project.
+Whether to install the dependencies after setup.
 Use `--no-install` to omit.
 
 ```
@@ -57,9 +57,9 @@ npm init @loopmode/electron-project --no-install
 
 #### Add-ons
 
-All add-ons supported by `electron-webpack` are available as CLI options.  
+All add-ons that are supported by `electron-webpack` are or will be available as a question and CLI option.  
 For the exact naming of each CLI option, check the `--help`.
-For details about each of the add-ons, check the [official docs](https://webpack.electron.build/add-ons).
+For details about each of the add-ons, check the [electron-webpack documentation](https://webpack.electron.build/add-ons).
 
 ```
 Usage:
