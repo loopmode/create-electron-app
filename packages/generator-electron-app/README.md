@@ -6,9 +6,9 @@ Yeoman generator for [@loopmode/create-electron-app](https://www.npmjs.com/packa
 
 #### `projectName`
 
-Name for the new project and its folder.
-If you want to use the `--yes` option silent mode, this argument is required.
-In interactive mode, this will be the default value for the `projectName` question.
+Name for the new project. A folder is created with that name, and the project is installed in it.
+Required if you want to use the `--yes` option (silent mode).
+Optional for interactive mode, where it will be the default value for the `projectName` question.
 
 Example:
 
