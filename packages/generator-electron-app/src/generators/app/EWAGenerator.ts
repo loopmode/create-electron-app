@@ -6,8 +6,8 @@ import { EWAGeneratorOptions } from '../../types';
 import { getBinaryFiles, getBinaryIgnoreGlobs } from '../../utils/binaryUtils';
 import { getConditionalSyntaxIgnoreGlobs as getConditionalIgnoreGlobs } from '../../utils/conditionalSyntax';
 import { initOptions, addComputedOptions, getAnswers, applyImplicitOptions } from '../../utils/questionsUtils';
-import * as renameTransform from '../../utils/rename-transform';
 
+import { createTransformStream, createIgnoreGlobs } from '@loopmode/yo-transform-filenames';
 const { name, version } = require('../../../package.json');
 
 export default class EWAGenerator extends Generator {
@@ -44,40 +44,30 @@ export default class EWAGenerator extends Generator {
         this.props = addComputedOptions(userOptions);
         this.destinationRoot(this.props.projectName);
     }
-    writing() {
+    async writing() {
         const context = this.props as {};
 
-        // register a stream that will rename files and folders
-        // that have our conditional syntax in their names
-        this.registerTransformStream(
-            renameTransform.createTransformStream(context, [
-                renameTransform.extensions,
-                renameTransform.variables,
-                renameTransform.conditionals
-            ])
-        );
+        this.registerTransformStream(createTransformStream(context));
 
         // template files that are binary throw errors when copied via copyTpl
-        // so we exclude them from fs.copyTpl, then manually fs.copy them
+        // so we exclude them from fs.copyTpl and manually fs.copy them instead
         const binaryTemplateFiles = getBinaryFiles(this.templatePath());
-        const binaryIgnoreGlobs = getBinaryIgnoreGlobs(binaryTemplateFiles);
-        // template files with conditional filename syntax might need to be ignored too
-        // (when the condition in their name doesn't match the given options)
-        const conditionalIgnoreGlobs = getConditionalIgnoreGlobs(context);
-
-        // first copy the template files
-        this.fs.copyTpl(
-            [this.templatePath('**/*'), ...binaryIgnoreGlobs] as any,
-            this.destinationPath(),
-            context,
-            {},
-            { globOptions: { dot: true, ignore: conditionalIgnoreGlobs } }
-        );
-
-        // finally copy the skipped binary files
         binaryTemplateFiles.forEach(file => {
             this.fs.copy(this.templatePath(file), this.destinationPath(file));
         });
+
+        this.fs.copyTpl(
+            [this.templatePath('**/*'), ...getBinaryIgnoreGlobs(binaryTemplateFiles)] as any,
+            this.destinationPath(),
+            context,
+            {},
+            {
+                globOptions: {
+                    dot: true,
+                    ignore: await createIgnoreGlobs(this.templatePath(), context)
+                }
+            }
+        );
     }
 
     install() {

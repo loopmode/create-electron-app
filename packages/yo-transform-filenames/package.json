@@ -1,13 +1,13 @@
 {
   "version": "0.0.1",
-  "name": "@loopmode/yo-filename-templates",
-  "description": "Support EJS template syntax in filenames",
+  "name": "@loopmode/yo-transform-filenames",
+  "description": "Template logic for filenames",
   "main": "lib/index.js",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:loopmode/create-electron-app.git",
-    "directory": "packages/yo-filename-templates"
+    "directory": "packages/yo-transform-filenames"
   },
   "publishConfig": {
     "access": "public"
@@ -17,12 +17,15 @@
     "templates",
     "conditional",
     "filename",
-    "filesystem"
+    "filesystem",
+    "yo",
+    "generator"
   ],
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@types/ejs": "^2.6.3",
