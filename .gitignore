@@ -6,3 +6,4 @@ thumbs.db
 *.log
 */.tsbuildinfo
 /foo
+/desktop.ini
