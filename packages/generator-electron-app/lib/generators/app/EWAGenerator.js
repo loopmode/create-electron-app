@@ -77,7 +77,16 @@ class EWAGenerator extends yeoman_generator_1.default {
     }
     end() {
         const props = this.props || {};
-        this.log(yosay_1.default(`All right - project created!\nTry it out:\n\ncd ${props.projectName}\nyarn dev`));
+        const messages = [
+            'All right!',
+            'Your project was created.',
+            'Try it out:\n',
+            `cd ${props.projectName}`,
+            !props.install && (props.yarn ? 'yarn install' : 'npm install'),
+            props.yarn ? 'yarn dev' : 'npm run dev'
+        ];
+        const message = messages.filter(Boolean).join('\n');
+        this.log(yosay_1.default(message));
     }
 }
 exports.default = EWAGenerator;

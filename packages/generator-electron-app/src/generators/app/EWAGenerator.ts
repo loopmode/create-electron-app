@@ -102,6 +102,16 @@ export default class EWAGenerator extends Generator {
 
     end() {
         const props = this.props || {};
-        this.log(yosay(`All right - project created!\nTry it out:\n\ncd ${props.projectName}\nyarn dev`));
+        const messages = [
+            'All right!',
+            'Your project was created.',
+            'Try it out:\n',
+            `cd ${props.projectName}`,
+            !props.install && (props.yarn ? 'yarn install' : 'npm install'),
+            props.yarn ? 'yarn dev' : 'npm run dev'
+        ];
+        const message = messages.filter(Boolean).join('\n');
+
+        this.log(yosay(message));
     }
 }
