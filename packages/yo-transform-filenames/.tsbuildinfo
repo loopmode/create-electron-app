@@ -768,6 +768,10 @@
       "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yeoman-environment/index.d.ts": {
         "version": "35b2a39bc08da7a96600c492d1ff2e1a75dc56f758265383bfee712c21ebbd5b",
         "signature": "35b2a39bc08da7a96600c492d1ff2e1a75dc56f758265383bfee712c21ebbd5b"
+      },
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yosay/index.d.ts": {
+        "version": "412089450bf0e1f18a29cdd6721f4dc4ea341c5cea9fa8497038f92fa7f1a782",
+        "signature": "412089450bf0e1f18a29cdd6721f4dc4ea341c5cea9fa8497038f92fa7f1a782"
       }
     },
     "options": {
@@ -795,7 +799,6 @@
       "rootDir": "C:/Projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src",
       "outDir": "C:/Projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/lib",
       "tsBuildInfoFile": "C:/Projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/.tsbuildinfo",
-      "watch": true,
       "configFilePath": "C:/Projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/tsconfig.json"
     },
     "referencedMap": {
@@ -1980,6 +1983,10 @@
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yeoman-generator/index.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yosay/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ]
     },
     "exportedModulesMap": {
@@ -2091,216 +2098,24 @@
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/normalize.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/delimiters.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/index.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/createignoreglobs.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/createtransformstream.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/renderpath.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/normalize.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/utils.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/renderpath.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/gulp-rename/index.d.ts"
+      ],
       "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/globals.d.ts": [
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/assert.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/async_hooks.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/buffer.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/events/index.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/child_process.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/net.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/cluster.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/child_process.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/net.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/console.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/constants.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/crypto.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/dgram.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/net.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/dns.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/dns.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/domain.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/fs.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/url.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/http.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/url.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/net.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/http2.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/fs.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/net.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/tls.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/url.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/http.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/https.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/tls.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/http.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/url.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/inspector.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/module.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/net.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/dns.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/os.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/path.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/perf_hooks.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/async_hooks.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/process.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/punycode.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/querystring.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/repl.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/vm.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/string_decoder.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/timers.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/tls.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/crypto.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/dns.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/net.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/trace_events.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/tty.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/net.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/url.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/querystring.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/v8.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/vm.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/worker_threads.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/vm.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/zlib.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -2347,87 +2162,190 @@
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/zlib.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/globals.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/globals.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/index.d.ts": [
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/base.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/globals.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/minimatch/index.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/glob/index.d.ts": [
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/mem-fs/index.d.ts": [
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/minimatch/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/vinyl/index.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/index.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/ejs/index.d.ts": [
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yeoman-environment/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/mem-fs/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yeoman-generator/index.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/gulp-rename/index.d.ts": [
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/vinyl/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/fs.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/index.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/normalize.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/delimiters.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/renderpath.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/gulp-rename/index.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/utils.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/gulp-rename/index.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/index.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/createignoreglobs.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/createtransformstream.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/renderpath.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/normalize.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/utils.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@babel/types/lib/index.d.ts": [
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/through/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/index.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/babel__generator/index.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@babel/types/lib/index.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/through/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/objects/choice.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/objects/choices.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/objects/separator.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/base.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/checkbox.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/confirm.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/editor.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/expand.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/input.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/list.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/number.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/password.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/rawlist.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/ui/bottom-bar.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/ui/prompt.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/events.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/paginator.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/readline.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/screen-manager.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/utils.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/babel__traverse/index.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@babel/types/lib/index.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yeoman-generator/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/index.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@babel/parser/typings/babel-parser.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@babel/types/lib/index.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/utils.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/index.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/babel__template/index.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@babel/parser/typings/babel-parser.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@babel/types/lib/index.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/ui/prompt.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/ui/baseui.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/babel__core/index.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/babel__generator/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/babel__traverse/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/babel__template/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@babel/types/lib/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@babel/parser/typings/babel-parser.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/ui/bottom-bar.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/through/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/ui/baseui.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/ui/baseui.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/rawlist.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/base.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/paginator.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/password.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/base.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/number.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/input.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/list.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/base.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/paginator.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/input.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/base.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/expand.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/paginator.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/base.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/editor.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/base.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/confirm.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/base.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/checkbox.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/base.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/paginator.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/base.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/screen-manager.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/objects/choices.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/objects/choice.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/objects/separator.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/objects/separator.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/objects/choice.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -2437,389 +2355,295 @@
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/gulp-rename/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/index.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/utils.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/gulp-rename/index.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/glob/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/minimatch/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/index.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/async_hooks.d.ts": [
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/operator.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/perf_hooks.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/async_hooks.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/iif.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/buffer.d.ts": [
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/throwerror.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/events/index.d.ts": [
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/operator.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/iif.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/throwerror.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/child_process.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/net.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subject.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/operator.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/cluster.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/child_process.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/net.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/connectableobservable.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subject.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/console.d.ts": [
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/operators/groupby.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subject.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/constants.d.ts": [
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/symbol/observable.d.ts": [
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/crypto.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/behaviorsubject.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subject.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/tls.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/crypto.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/dns.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/net.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/replaysubject.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subject.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/https.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/tls.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/http.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/url.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/asyncsubject.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subject.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/http2.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/fs.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/net.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/tls.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/url.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/http.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/action.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/dgram.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/net.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/dns.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/action.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/dns.d.ts": [
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncscheduler.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/action.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncaction.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/net.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/dns.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncaction.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/action.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncscheduler.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/tty.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/net.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asapscheduler.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncaction.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncscheduler.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/http.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/url.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/net.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asap.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asapscheduler.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/domain.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/async.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncscheduler.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts": [
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/queuescheduler.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncscheduler.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/worker_threads.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/vm.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/queue.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/queuescheduler.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/animationframescheduler.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncaction.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncscheduler.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/zlib.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/animationframe.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/animationframescheduler.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/v8.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/virtualtimescheduler.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncaction.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncscheduler.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/notification.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/readline.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/util/pipe.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/util/noop.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/util/identity.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/util/isobservable.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/util/argumentoutofrangeerror.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/util/emptyerror.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/util/objectunsubscribederror.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/util/unsubscriptionerror.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/util/timeouterror.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/bindcallback.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/bindnodecallback.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/innersubscriber.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/outersubscriber.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/outersubscriber.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/innersubscriber.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/combinelatest.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/outersubscriber.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/operator.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/innersubscriber.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/concat.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/defer.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/empty.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/forkjoin.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/from.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/fromevent.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/fromeventpattern.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/fromevent.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/generate.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/interval.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/merge.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/never.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/of.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/onerrorresumenext.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/pairs.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/partition.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/race.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/operator.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/outersubscriber.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/innersubscriber.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/range.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/timer.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/using.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/zip.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/operator.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduled/scheduled.d.ts": [
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/events.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/index.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/config.d.ts": [
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/screen-manager.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/paginator.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/screen-manager.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/repl.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/vm.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/fs.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/url.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/inspector.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/module.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/os.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/path.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/process.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/punycode.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/querystring.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/url.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/querystring.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/string_decoder.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/timers.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/trace_events.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yosay/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yargs/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yargs-parser/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yargs-parser/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/stack-utils/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/normalize-package-data/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/jest/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/jest-diff/build/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/jest-diff/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/jest-diff/build/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/jest-diff/build/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/jest-diff/build/types.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/jest-diff/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/istanbul-reports/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/istanbul-lib-report/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/istanbul-lib-coverage/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/istanbul-lib-report/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/istanbul-lib-coverage/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/istanbul-lib-coverage/index.d.ts": [
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -2882,256 +2706,443 @@
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/through/index.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/objects/choice.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/objects/separator.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/objects/choices.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/objects/choice.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/objects/separator.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/screen-manager.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/base.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/screen-manager.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/paginator.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/screen-manager.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/checkbox.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/base.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/paginator.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/confirm.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/base.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/editor.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/base.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/expand.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/paginator.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/base.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/input.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/base.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/list.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/base.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/paginator.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/number.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/input.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/password.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/base.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/rawlist.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/base.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/paginator.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/ui/baseui.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/ui/bottom-bar.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/through/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/ui/baseui.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/ui/prompt.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/ui/baseui.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/events.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduled/scheduled.d.ts": [
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/index.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/readline.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/config.d.ts": [
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/utils.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/index.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/zip.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/operator.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/readline.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/through/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/objects/choice.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/objects/choices.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/objects/separator.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/base.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/checkbox.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/confirm.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/editor.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/expand.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/input.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/list.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/number.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/password.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/prompts/rawlist.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/ui/bottom-bar.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/ui/prompt.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/events.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/paginator.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/readline.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/screen-manager.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/lib/utils/utils.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/using.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/istanbul-lib-coverage/index.d.ts": [
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/timer.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/istanbul-lib-report/index.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/istanbul-lib-coverage/index.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/range.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/istanbul-reports/index.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/istanbul-lib-report/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/istanbul-lib-coverage/index.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/race.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/operator.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/outersubscriber.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/innersubscriber.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/jest-diff/index.d.ts": [
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/partition.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/jest-diff/build/types.d.ts": [
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/pairs.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/jest-diff/build/index.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/jest-diff/build/types.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/onerrorresumenext.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/jest/index.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/jest-diff/build/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/jest-diff/index.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/of.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/vinyl/index.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/fs.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/index.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/never.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/mem-fs/index.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/stream.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/vinyl/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/index.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/merge.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/normalize-package-data/index.d.ts": [
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/interval.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/stack-utils/index.d.ts": [
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/generate.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yargs-parser/index.d.ts": [
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/fromeventpattern.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/fromevent.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yargs/index.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yargs-parser/index.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/fromevent.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yeoman-generator/index.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/index.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/from.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yeoman-environment/index.d.ts": [
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/events.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/mem-fs/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/inquirer/index.d.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yeoman-generator/index.d.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/forkjoin.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/empty.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/defer.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/concat.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/combinelatest.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/outersubscriber.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/operator.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/innersubscriber.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/outersubscriber.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/innersubscriber.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/innersubscriber.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/outersubscriber.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/bindnodecallback.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/bindcallback.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/util/timeouterror.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/util/unsubscriptionerror.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/util/objectunsubscribederror.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/util/emptyerror.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/util/argumentoutofrangeerror.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/util/isobservable.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/util/identity.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/util/noop.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/util/pipe.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/notification.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/virtualtimescheduler.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncaction.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncscheduler.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/animationframe.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/animationframescheduler.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/animationframescheduler.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncaction.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncscheduler.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/queue.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/queuescheduler.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/queuescheduler.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncscheduler.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/async.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncscheduler.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asap.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asapscheduler.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asapscheduler.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncaction.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncscheduler.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncaction.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/action.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncscheduler.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncscheduler.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/action.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/asyncaction.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/action.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/scheduler/action.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/asyncsubject.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subject.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/replaysubject.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subject.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/behaviorsubject.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subject.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/symbol/observable.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/operators/groupby.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subject.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/connectableobservable.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subject.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subject.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/operator.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/operator.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/iif.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/throwerror.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/throwerror.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable/iif.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/observable.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/operator.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscriber.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/subscription.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/rxjs/internal/types.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/babel__core/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/babel__generator/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/babel__traverse/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/babel__template/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@babel/types/lib/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@babel/parser/typings/babel-parser.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/babel__template/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@babel/parser/typings/babel-parser.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@babel/types/lib/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@babel/parser/typings/babel-parser.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@babel/types/lib/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/babel__traverse/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@babel/types/lib/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/babel__generator/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@babel/types/lib/index.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@babel/types/lib/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/ejs/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/minimatch/index.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/globals.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/globals.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts": [
+        "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts"
+      ],
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/vm.d.ts": [
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ]
@@ -3215,6 +3226,7 @@
       "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/ejs/index.d.ts",
       "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/gulp-rename/index.d.ts",
       "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/normalize.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/renderpath.ts",
       "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/createignoreglobs.ts",
       "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/utils.ts",
       "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/createtransformstream.ts",
@@ -3328,7 +3340,7 @@
       "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yargs/index.d.ts",
       "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yeoman-generator/index.d.ts",
       "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yeoman-environment/index.d.ts",
-      "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/renderpath.ts"
+      "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yosay/index.d.ts"
     ]
   },
   "version": "3.5.3"

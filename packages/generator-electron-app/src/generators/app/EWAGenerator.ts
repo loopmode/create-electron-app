@@ -2,6 +2,7 @@ import path from 'path';
 import fs from 'fs-extra';
 
 import Generator from 'yeoman-generator';
+import yosay from 'yosay';
 
 import { EWAGeneratorOptions } from '../../types';
 import { getBinaryFiles, getBinaryIgnoreGlobs } from '../../utils/binaryUtils';
@@ -97,5 +98,10 @@ export default class EWAGenerator extends Generator {
                 this.npmInstall();
             }
         }
+    }
+
+    end() {
+        const props = this.props || {};
+        this.log(yosay(`All right - project created!\nTry it out:\n\ncd ${props.projectName}\nyarn dev`));
     }
 }

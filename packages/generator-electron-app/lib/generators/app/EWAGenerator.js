@@ -14,6 +14,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const path_1 = __importDefault(require("path"));
 const fs_extra_1 = __importDefault(require("fs-extra"));
 const yeoman_generator_1 = __importDefault(require("yeoman-generator"));
+const yosay_1 = __importDefault(require("yosay"));
 const binaryUtils_1 = require("../../utils/binaryUtils");
 const questionsUtils_1 = require("../../utils/questionsUtils");
 const yo_transform_filenames_1 = require("@loopmode/yo-transform-filenames");
@@ -73,6 +74,10 @@ class EWAGenerator extends yeoman_generator_1.default {
                 this.npmInstall();
             }
         }
+    }
+    end() {
+        const props = this.props || {};
+        this.log(yosay_1.default(`All right - project created!\nTry it out:\n\ncd ${props.projectName}\nyarn dev`));
     }
 }
 exports.default = EWAGenerator;

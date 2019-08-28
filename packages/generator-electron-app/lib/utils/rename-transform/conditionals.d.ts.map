@@ -1,1 +1,0 @@
-{"version":3,"file":"conditionals.d.ts","sourceRoot":"","sources":["../../../src/utils/rename-transform/conditionals.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAE,MAAM,aAAa,CAAC;AACzC,OAAO,EAAE,aAAa,EAAE,MAAM,aAAa,CAAC;AAW5C,MAAM,CAAC,OAAO,UAAU,qBAAqB,CACzC,IAAI,EAAE,UAAU,EAChB,QAAQ,EAAE,aAAa,EACvB,MAAM,GAAE,MAA0C,GACnD,UAAU,CASZ"}

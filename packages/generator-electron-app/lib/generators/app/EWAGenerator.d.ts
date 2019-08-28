@@ -6,5 +6,6 @@ export default class EWAGenerator extends Generator {
     prompting(): Promise<void>;
     writing(): Promise<void>;
     install(): void;
+    end(): void;
 }
 //# sourceMappingURL=EWAGenerator.d.ts.map
