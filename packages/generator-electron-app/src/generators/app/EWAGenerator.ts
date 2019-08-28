@@ -11,6 +11,8 @@ import { initOptions, addComputedOptions, getAnswers, applyImplicitOptions } fro
 import { createTransformStream, createIgnoreGlobs, getFilePath, renderPath } from '@loopmode/yo-transform-filenames';
 const { name, version } = require('../../../package.json');
 
+if (process.env.NODE_ENV === 'development') console.log('EWAGenerator');
+
 export default class EWAGenerator extends Generator {
     props?: EWAGeneratorOptions;
 

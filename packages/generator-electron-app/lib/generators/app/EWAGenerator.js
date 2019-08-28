@@ -19,6 +19,8 @@ const binaryUtils_1 = require("../../utils/binaryUtils");
 const questionsUtils_1 = require("../../utils/questionsUtils");
 const yo_transform_filenames_1 = require("@loopmode/yo-transform-filenames");
 const { name, version } = require('../../../package.json');
+if (process.env.NODE_ENV === 'development')
+    console.log('EWAGenerator');
 class EWAGenerator extends yeoman_generator_1.default {
     constructor(args, opts) {
         super(args, opts);
