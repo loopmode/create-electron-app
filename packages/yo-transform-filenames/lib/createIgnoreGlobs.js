@@ -19,9 +19,9 @@ function createIgnoreGlobs(dir, context, globOptions) {
         return candidates.reduce((result, candidate) => {
             const rendered = renderPath_1.renderPath(candidate, context);
             if (rendered.ignore) {
-                const safeGlob = candidate.replace(/'/g, '*');
-                result.push(`**/*${safeGlob}*`, `**/*${safeGlob}*/*`);
+                candidate = candidate.replace(/'/g, '*');
             }
+            result.push(`**/*${candidate}*`, `**/*${candidate}*/*`);
             return result;
         }, []);
     });

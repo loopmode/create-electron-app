@@ -6,9 +6,13 @@ export async function createIgnoreGlobs(dir: string, context: {}, globOptions?: 
     return candidates.reduce((result: string[], candidate) => {
         const rendered = renderPath(candidate, context);
         if (rendered.ignore) {
-            const safeGlob = candidate.replace(/'/g, '*');
-            result.push(`**/*${safeGlob}*`, `**/*${safeGlob}*/*`);
+            // we basically use the existing filenames as ignore-globs
+            // however, there are problems with globs that contain quotes
+            // I couldn't escape them successfully despite of considerable amount of efforts
+            // as a workaround, we replace quotes with asterisks, which gets the job done too
+            candidate = candidate.replace(/'/g, '*');
         }
+        result.push(`**/*${candidate}*`, `**/*${candidate}*/*`);
         return result;
     }, []);
 }
