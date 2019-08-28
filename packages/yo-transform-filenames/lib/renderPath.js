@@ -10,13 +10,25 @@ function renderPath(candidate, context, options = {}) {
     const original = parsePath(candidate);
     const rendered = ejs_1.default.render(normalize_1.normalizeSyntax(candidate), context, options);
     const parsed = parsePath(rendered);
-    const ignore = isFalsy(parsed.dirname) || isFalsy(parsed.basename);
-    return Object.assign({ ignore }, ignore ? original : parsed);
+    const ignore = isFalsy(parsed);
+    return Object.assign({ ignore }, (ignore ? original : parsed));
 }
 exports.renderPath = renderPath;
-const falsyValues = ['false', 'undefined', 'null', '0'];
-function isFalsy(value) {
-    return value ? falsyValues.some(falsyValue => value.endsWith(falsyValue)) : false;
+function isFalsy(path) {
+    return ['false', 'undefined', 'null', '0'].some(value => {
+        if (path.dirname) {
+            if (path.dirname === value) {
+                return true;
+            }
+            if (path.dirname.includes(`/${value}`) || path.dirname.includes(`\\${value}`)) {
+                return true;
+            }
+        }
+        if (path.basename === value) {
+            return true;
+        }
+        return false;
+    });
 }
 exports.isFalsy = isFalsy;
 function parsePath(path) {

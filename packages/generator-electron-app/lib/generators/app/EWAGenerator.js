@@ -12,6 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const path_1 = __importDefault(require("path"));
+const fs_extra_1 = __importDefault(require("fs-extra"));
 const yeoman_generator_1 = __importDefault(require("yeoman-generator"));
 const binaryUtils_1 = require("../../utils/binaryUtils");
 const questionsUtils_1 = require("../../utils/questionsUtils");
@@ -44,14 +45,20 @@ class EWAGenerator extends yeoman_generator_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             const context = this.props;
             this.registerTransformStream(yo_transform_filenames_1.createTransformStream(context));
-            const binaryTemplateFiles = binaryUtils_1.getBinaryFiles(this.templatePath());
-            binaryTemplateFiles.forEach(file => {
-                this.fs.copy(this.templatePath(file), this.destinationPath(file));
+            const ignoredConditionalFiles = (yield yo_transform_filenames_1.createIgnoreGlobs(this.templatePath(), context));
+            const binaryTemplateFiles = binaryUtils_1.getBinaryFiles(this.templatePath(), ignoredConditionalFiles);
+            binaryTemplateFiles.forEach((file) => {
+                const rendered = yo_transform_filenames_1.renderPath(this.destinationPath(file), context);
+                const src = this.templatePath(file);
+                const dest = yo_transform_filenames_1.getFilePath(rendered);
+                fs_extra_1.default.ensureDirSync(path_1.default.dirname(dest));
+                fs_extra_1.default.copyFileSync(src, dest);
             });
-            this.fs.copyTpl([this.templatePath('**/*'), ...binaryUtils_1.getBinaryIgnoreGlobs(binaryTemplateFiles)], this.destinationPath(), context, {}, {
+            const ignoredBinaryFiles = binaryUtils_1.getBinaryIgnoreGlobs(binaryTemplateFiles);
+            this.fs.copyTpl([this.templatePath('**/*')], this.destinationPath(), context, {}, {
                 globOptions: {
                     dot: true,
-                    ignore: yield yo_transform_filenames_1.createIgnoreGlobs(this.templatePath(), context)
+                    ignore: [...ignoredBinaryFiles, ...ignoredConditionalFiles]
                 }
             });
         });

@@ -16,6 +16,7 @@ export interface EWAGeneratorOptions {
     less?: boolean;
     sass?: boolean;
     react?: boolean;
+    vue?: boolean;
     ejs?: boolean;
     nunjucks?: boolean;
     webpack?: boolean;

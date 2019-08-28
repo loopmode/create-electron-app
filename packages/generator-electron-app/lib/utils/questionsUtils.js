@@ -121,6 +121,9 @@ function applyImplicitOptions(options) {
         options.webpack = true;
         options.defaultRendererTemplate = false;
     }
+    if (options.vue) {
+        options.defaultRendererTemplate = false;
+    }
     if (options.webpack) {
         options.electronWebpackConfig = true;
     }

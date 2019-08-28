@@ -31,6 +31,7 @@ export interface EWAGeneratorOptions {
     sass?: boolean;
     // frameworks
     react?: boolean;
+    vue?: boolean;
     // templates
     ejs?: boolean;
     nunjucks?: boolean;

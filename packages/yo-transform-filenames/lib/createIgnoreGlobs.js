@@ -20,10 +20,12 @@ function createIgnoreGlobs(dir, context, globOptions) {
             const rendered = renderPath_1.renderPath(candidate, context);
             if (rendered.ignore) {
                 candidate = candidate.replace(/'/g, '*');
+                result.add(`**/*${candidate}*`);
+                result.add(`**/*${candidate}*/*`);
+                result.add(`**/*${candidate}*/**/*`);
             }
-            result.push(`**/*${candidate}*`, `**/*${candidate}*/*`);
             return result;
-        }, []);
+        }, new Set(['**/*false*', '**/*false*/*', '**/*false*/**/*']));
     });
 }
 exports.createIgnoreGlobs = createIgnoreGlobs;

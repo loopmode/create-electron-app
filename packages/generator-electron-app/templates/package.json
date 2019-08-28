@@ -1,5 +1,6 @@
 {
-  "name": "electron-webpack-quick-start",
+  "private": true,
+  "name": "<%= projectName %>",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -24,23 +25,29 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-hot-loader": "^4.8.3",<% } %>
-    "source-map-support": "^0.5.12"
+    "source-map-support": "^0.5.12"<%if (vue) { %>,
+    "vue": "^2.6.0"<% } %>
   },
   "devDependencies": {<%if (react) { %>
-    "@babel/preset-react": "^7.0.0",<% } %>
+    "@babel/preset-react": "^7.0.0",<% } %><%if (eslint && vue) { %>
+    "@vue/eslint-config-prettier": "^5.0.0",<% } %>
     "electron": "5.0.6",
     "electron-builder": "^21.0.11",
     "electron-webpack": "^2.7.4",<%if (eslint) { %>
     "electron-webpack-eslint": "^5.0.1",<% } %><%if (typescript) { %>
-    "electron-webpack-ts": "^3.2.0",<% } %><%if (ejs) { %>
+    "electron-webpack-ts": "^3.2.0",<% } %><%if (vue) { %>
+    "electron-webpack-vue": "^2.3.0",<% } %><%if (ejs) { %>
     "ejs": "^2.6.2",
-    "ejs-html-loader": "^4.0.1",<% } %><%if (eslint && react) { %>
-    "eslint-plugin-react": "^7.12.4",<% } %><%if (less) { %>
+    "ejs-html-loader": "^4.0.1",<% } %>
+    "eslint-plugin-prettier": "^3.1.0",<%if (eslint && react) { %>
+    "eslint-plugin-react": "^7.12.4",<% } %><%if (eslint && vue) { %>
+    "eslint-plugin-vue": "^5.2.3",<% } %><%if (less) { %>
     "less": "^3.10.1",
     "less-loader": "^5.0.0",<% } %><%if (nunjucks) { %>
     "nunjucks": "^3.2.0",
     "nunjucks-loader": "^3.0.0",<% } %><%if (sass) { %>
     "node-sass": "^4.12.0",
+    "prettier": "^1.18.2",
     "sass-loader": "^7.2.0",<% } %><%if (typescript) { %>
     "typescript": "^3.5.3",<% } %>
     "webpack": "~4.35.3"<%if (notifications) { %>,

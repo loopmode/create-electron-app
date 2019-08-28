@@ -1,14 +1,21 @@
 module.exports = {
- 
-  extends: ['eslint:recommended'<%if (react) { %>, 'plugin:react/recommended'<% } %>],
-
-  parser: 'babel-eslint',
-  parserOptions: {
-    sourceType: 'module'
-  },
+  root: true,
   env: {
     browser: true,
     node: true
+  },
+  extends: [
+    'eslint:recommended'<% if (react) { %>,
+    'plugin:react/recommended'<% } %><% if (vue) { %>,
+    'plugin:vue/recommended',
+    '@vue/prettier',
+    'plugin:prettier/recommended'
+    <% } %>
+  ], 
+  <% if (!vue) { %>parser: 'babel-eslint',<% } %>
+  parserOptions: {
+    <% if (vue) { %>parser: 'babel-eslint',<% } %>
+    sourceType: 'module'
   },
   globals: {
     __static: true
@@ -22,6 +29,9 @@ module.exports = {
     // allow anonymous component functions
     'react/display-name': 0,<% } %>
     // allow spreading out properties from an object without warnings
-    'no-unused-vars': [1, { ignoreRestSiblings: true }]
+    'no-unused-vars': [1, { ignoreRestSiblings: true }],
+ 
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   }
 }

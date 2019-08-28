@@ -7,4 +7,5 @@ __export(require("./createIgnoreGlobs"));
 __export(require("./createTransformStream"));
 __export(require("./renderPath"));
 __export(require("./normalize"));
+__export(require("./utils"));
 //# sourceMappingURL=index.js.map

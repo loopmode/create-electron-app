@@ -314,12 +314,12 @@
         "signature": "655c516933cd31b74a26cea9943ff3981c87274c585c293928be5dc516027316"
       },
       "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/renderpath.ts": {
-        "version": "8dbc1a7f75cfeb064fbc99c51ba6136e5aad298242d710efdc7e7865c7ab91c3",
-        "signature": "1b066fc0d80c369d902090dc265ab5a883adb482120f27bafd2c8c09d9282ef1"
+        "version": "456eaa29e44f8248a86896dc703a948e096e14f8dc79e0a2692fef42bb3cb811",
+        "signature": "a9820caceec8a85f6f9dd4525c76e09c41287ceb1460101c6e618f5e84af8dd2"
       },
       "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/createignoreglobs.ts": {
-        "version": "7a52b93258debe11c4df26535c83ae2f9bcc50606072fae46c998c4612afe961",
-        "signature": "c84d79c5e61b5632b2461b54509afb2c5dd604b95d9568dddc9b9f9d4888564e"
+        "version": "d6a5393ef7d3efea070a7f5b3e980200be22cd7b7104fa52510e9e4b6450227b",
+        "signature": "ff363d28667c896543eed508e24147e005eb78363c24bb30256a9d1c0fb0b708"
       },
       "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/utils.ts": {
         "version": "12b195fd46eb2644608694d23e0101a9bd772c73eac561ef1dff701c926fa213",
@@ -330,8 +330,8 @@
         "signature": "8900836825d1b182c88d5543d83df51ddf974257f0081a29d9de33096d99dfb0"
       },
       "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/index.ts": {
-        "version": "b78da3636436acbc88412a649f5bfebc10236d9001c4017f3a3b1bbe56668d3f",
-        "signature": "9fd5b19810e11999dfd5003ec1605e0c0f781f4065613992e18449cc6ae2053b"
+        "version": "330f35b3799cba279a3108df9c110344c516c91266ba4e9180e7dbf63d59dcf7",
+        "signature": "47d5fd351ed59ec873e72e6e34e8e968337db8c4d1f2e2a14dcdb5490b4e0fee"
       },
       "c:/projects/@github/@loopmode/create-electron-app/node_modules/@babel/types/lib/index.d.ts": {
         "version": "bc12492fa90cd2ad3f73c10efa597503dbf59ebac0e3c9728cc10adaad6b0b87",
@@ -1239,6 +1239,7 @@
         "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/createtransformstream.ts",
         "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/renderpath.ts",
         "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/normalize.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/utils.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -2393,7 +2394,8 @@
         "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/createignoreglobs.ts",
         "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/createtransformstream.ts",
         "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/renderpath.ts",
-        "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/normalize.ts"
+        "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/normalize.ts",
+        "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/utils.ts"
       ],
       "c:/projects/@github/@loopmode/create-electron-app/node_modules/@babel/types/lib/index.d.ts": [
         "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/node/util.d.ts",
@@ -3213,9 +3215,10 @@
       "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/ejs/index.d.ts",
       "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/gulp-rename/index.d.ts",
       "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/normalize.ts",
-      "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/renderpath.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/createignoreglobs.ts",
       "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/utils.ts",
       "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/createtransformstream.ts",
+      "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/index.ts",
       "c:/projects/@github/@loopmode/create-electron-app/node_modules/@babel/types/lib/index.d.ts",
       "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/babel__generator/index.d.ts",
       "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/babel__traverse/index.d.ts",
@@ -3325,8 +3328,7 @@
       "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yargs/index.d.ts",
       "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yeoman-generator/index.d.ts",
       "c:/projects/@github/@loopmode/create-electron-app/node_modules/@types/yeoman-environment/index.d.ts",
-      "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/createignoreglobs.ts",
-      "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/index.ts"
+      "c:/projects/@github/@loopmode/create-electron-app/packages/yo-transform-filenames/src/renderpath.ts"
     ]
   },
   "version": "3.5.3"

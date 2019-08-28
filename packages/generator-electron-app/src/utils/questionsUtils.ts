@@ -137,6 +137,9 @@ export function applyImplicitOptions(options: EWAGeneratorOptions): EWAGenerator
         options.webpack = true;
         options.defaultRendererTemplate = false;
     }
+    if (options.vue) {
+        options.defaultRendererTemplate = false;
+    }
     if (options.webpack) {
         options.electronWebpackConfig = true;
     }
