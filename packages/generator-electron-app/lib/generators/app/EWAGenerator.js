@@ -38,10 +38,16 @@ class EWAGenerator extends yeoman_generator_1.default {
             const options = this.options;
             const cliValues = Object.assign({}, options);
             const questionDefaults = Object.assign({}, cliValues, { projectName: options.projectName });
-            let userOptions = yield questionsUtils_1.getAnswers(this, cliValues, questionDefaults);
-            userOptions = questionsUtils_1.applyImplicitOptions(userOptions);
-            this.props = questionsUtils_1.addComputedOptions(userOptions);
-            this.destinationRoot(this.props.projectName);
+            try {
+                let userOptions = yield questionsUtils_1.getAnswers(this, cliValues, questionDefaults);
+                userOptions = questionsUtils_1.applyImplicitOptions(userOptions);
+                this.props = questionsUtils_1.addComputedOptions(userOptions);
+                this.destinationRoot(this.props.projectName);
+            }
+            catch (error) {
+                this.log(`An error occurred: ${error.message}`);
+                process.exit(1);
+            }
         });
     }
     writing() {
@@ -67,7 +73,7 @@ class EWAGenerator extends yeoman_generator_1.default {
         });
     }
     install() {
-        const { install, yarn } = this.options;
+        const { install, yarn } = this.props;
         if (install) {
             if (yarn) {
                 this.yarnInstall();

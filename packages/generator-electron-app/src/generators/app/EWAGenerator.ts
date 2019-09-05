@@ -41,11 +41,15 @@ export default class EWAGenerator extends Generator {
             projectName: options.projectName
         };
 
-        let userOptions: EWAGeneratorOptions = await getAnswers(this, cliValues, questionDefaults);
-        userOptions = applyImplicitOptions(userOptions);
-
-        this.props = addComputedOptions(userOptions);
-        this.destinationRoot(this.props.projectName);
+        try {
+            let userOptions: EWAGeneratorOptions = await getAnswers(this, cliValues, questionDefaults);
+            userOptions = applyImplicitOptions(userOptions);
+            this.props = addComputedOptions(userOptions);
+            this.destinationRoot(this.props.projectName);
+        } catch (error) {
+            this.log(`An error occurred: ${error.message}`);
+            process.exit(1);
+        }
     }
     async writing() {
         const context = this.props as {};
@@ -92,7 +96,7 @@ export default class EWAGenerator extends Generator {
     }
 
     install() {
-        const { install, yarn } = this.options as EWAGeneratorOptions;
+        const { install, yarn } = this.props as EWAGeneratorOptions;
         if (install) {
             if (yarn) {
                 this.yarnInstall();

@@ -1,6 +1,6 @@
-import { EWAGeneratorOptions } from '../types';
+import { EWAGeneratorOptions, GeneratorOption } from '../types';
 
-import { options as appOptions } from '../generators/app/options';
+import { options as appOptions, options } from '../generators/app/options';
 import Generator, { Question, Answers } from 'yeoman-generator';
 import camelcase = require('camelcase');
 const validators = {
@@ -18,7 +18,7 @@ export function initOptions(generator: Generator) {
     });
 }
 
-function getQuestions(values: EWAGeneratorOptions): Question[] {
+function getQuestions(values: EWAGeneratorOptions, verbose?: boolean): Question[] {
     const typeMap: Record<string, string> = {
         Boolean: 'confirm'
     };
@@ -65,70 +65,183 @@ export async function getAnswers(
     cliValues: EWAGeneratorOptions,
     defaults: EWAGeneratorOptions
 ): Promise<EWAGeneratorOptions> {
-    const result: EWAGeneratorOptions = {
+    let currentQuestions = getQuestions(defaults);
+    let currentResult: EWAGeneratorOptions = {
         ...defaultInternalOptions,
         projectName: cliValues.projectName
     };
 
-    function getDefaultAnswers(): Answers {
-        return questions.reduce((result, question) => {
-            const name = question.name as string;
-            const value = (defaults as any)[name] || question.default;
-            if (value === undefined) {
-                return result;
-            }
-            return {
-                ...result,
-                [name]: value
-            };
-        }, {});
-    }
-
-    // attention: questions array gets mutated later on
-    // (we splice some questions out of it)
-    const questions = getQuestions(defaults);
-
     if (cliValues.projectName && cliValues.yes) {
         // earliest exit: projectName is given, yes is specified; use defaults
-        return Object.assign(result, getDefaultAnswers());
+        currentResult = { ...currentResult, ...getDefaultAnswers(currentQuestions, defaults) };
+        return currentResult;
     }
 
     {
-        const nameQuestion = questions.find(question => question.name === 'projectName');
-        if (nameQuestion) {
-            // pluck projectName from array so user won't have to answer again later
-            questions.splice(questions.indexOf(nameQuestion), 1);
-        }
+        const { result, questions } = await askProjectNameQuestion({ currentResult, currentQuestions, generator });
+        currentResult = result;
+        currentQuestions = questions;
+    }
 
-        if (nameQuestion && !result.projectName) {
-            // promt for projectName if it was not specified via CLI already
-            const answers = await generator.prompt(nameQuestion);
-            result.projectName = answers.projectName;
+    {
+        const { result, questions, skipQuestions } = await askSkipQuestion({
+            currentResult,
+            currentQuestions,
+            generator,
+            cliValues,
+            defaults
+        });
+        currentResult = result;
+        currentQuestions = questions;
+
+        if (skipQuestions) {
+            return currentResult;
         }
     }
 
     {
-        const yesQuestion = questions.find(question => question.name === 'yes');
-        if (yesQuestion) {
-            // pluck yes from array so user won't have to answer again later
-            questions.splice(questions.indexOf(yesQuestion), 1);
-            // however, ask the user whether he wants to skip questions and use defaults
-            const answers = await generator.prompt({ ...yesQuestion, default: true });
-            if (answers.yes) {
-                return Object.assign(result, getDefaultAnswers());
+        const { result, questions } = await askVerboseQuestion({
+            currentResult,
+            currentQuestions,
+            generator,
+            cliValues
+        });
+        currentResult = result;
+        currentQuestions = questions;
+    }
+
+    const userQuestions = getUserQuestions(currentQuestions, cliValues);
+    const userAnswers = await generator.prompt(userQuestions);
+    currentResult = { ...currentResult, ...userAnswers };
+
+    return currentResult;
+}
+
+interface QuestionModifierArgs {
+    currentResult: EWAGeneratorOptions;
+    currentQuestions: Question[];
+    generator: Generator;
+}
+interface QuestionModifierResult {
+    result: EWAGeneratorOptions;
+    questions: Question[];
+}
+
+async function askProjectNameQuestion({
+    currentResult: result,
+    currentQuestions: questions,
+    generator
+}: QuestionModifierArgs): Promise<QuestionModifierResult> {
+    const nameQuestion = questions.find(question => question.name === 'projectName');
+    if (nameQuestion) {
+        questions = questions.filter(question => question !== nameQuestion);
+    }
+
+    if (nameQuestion && !result.projectName) {
+        const { projectName } = await generator.prompt(nameQuestion);
+        result = { ...result, projectName };
+    }
+
+    return { result, questions };
+}
+
+interface SkipQuestionArgs extends QuestionModifierArgs {
+    cliValues: EWAGeneratorOptions;
+    defaults: EWAGeneratorOptions;
+}
+interface SkipQuestionResult extends QuestionModifierResult {
+    skipQuestions: boolean;
+}
+
+async function askSkipQuestion({
+    currentResult: result,
+    currentQuestions: questions,
+    generator,
+    cliValues,
+    defaults
+}: SkipQuestionArgs): Promise<SkipQuestionResult> {
+    // ask the user if he would like to skip the questions
+    let skipQuestions = false;
+    const yesQuestion = questions.find(question => question.name === 'yes');
+    if (yesQuestion) {
+        questions = questions.filter(question => question !== yesQuestion);
+        if (!cliValues.verbose) {
+            const { yes } = await generator.prompt({ ...yesQuestion, default: true });
+            if (yes) {
+                // second earliest exit: projectName is given, user chose to skip questions; use defaults
+                result = { ...result, ...getDefaultAnswers(questions, defaults) };
+                skipQuestions = true;
             }
         }
     }
+    return { questions, result, skipQuestions };
+}
 
-    // user chose to answer all (remaining) questions manually
+interface VerboseQuestionArgs extends QuestionModifierArgs {
+    cliValues: EWAGeneratorOptions;
+}
+async function askVerboseQuestion({
+    currentResult: result,
+    currentQuestions: questions,
+    generator,
+    cliValues
+}: VerboseQuestionArgs): Promise<QuestionModifierResult> {
+    // ask the user if he wants to answer all questions (verbose) or just the common ones
+    const verboseQuestion = questions.find(question => question.name === 'verbose');
+    if (verboseQuestion) {
+        questions = questions.filter(question => question !== verboseQuestion);
+        if (!cliValues.verbose) {
+            const { verbose } = await generator.prompt({ ...verboseQuestion, default: false });
+            // when user does NOT choose verbose, use default values for the verbose options
+            if (!verbose) {
+                const verboseDefaults = appOptions
+                    .filter(o => o.verbose)
+                    .reduce((result, o) => Object.assign(result, { [o.name]: o.default }), {});
+                result = { ...result, ...verboseDefaults };
+            }
+        }
+    }
+    return { result, questions };
+}
 
-    const notInternal = (question: Question): boolean => {
-        const option = appOptions.find(o => o.name === question.name);
-        return !(option && option.internal);
-    };
+function getUserQuestions(questions: Question[], cliValues: EWAGeneratorOptions) {
+    const filters = [
+        // internal options should never be asked via questions
+        function internalFilter(question: Question): boolean {
+            const option = appOptions.find(o => o.name === question.name);
+            return !(option && option.internal);
+        },
+        // verbose options should only be asked when the verbose flag is set
+        function verboseFilter(question: Question): boolean {
+            const option: GeneratorOption = appOptions.find(o => o.name === question.name) as GeneratorOption;
+            if (option && option.verbose) {
+                return cliValues.verbose || false;
+            }
+            return true;
+        }
+    ];
+    const userQuestions = questions.reduce((result: Question[], question: Question) => {
+        if (filters.every(filter => filter(question))) {
+            result.push(question);
+        }
+        return result;
+    }, []);
 
-    const userAnswers = await generator.prompt(questions.filter(notInternal));
-    return Object.assign(result, userAnswers);
+    return userQuestions;
+}
+
+function getDefaultAnswers(questions: Question[], defaults: EWAGeneratorOptions): Answers {
+    return questions.reduce((result, question) => {
+        const name = question.name as string;
+        const value = (defaults as any)[name] || question.default;
+        if (value === undefined) {
+            return result;
+        }
+        return {
+            ...result,
+            [name]: value
+        };
+    }, {});
 }
 
 export function applyImplicitOptions(options: EWAGeneratorOptions): EWAGeneratorOptions {

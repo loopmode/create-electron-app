@@ -22,6 +22,7 @@ export interface RunGeneratorOptions {
 export interface EWAGeneratorOptions {
     projectName?: string;
     yes?: boolean;
+    verbose?: boolean;
     install?: boolean;
     yarn?: boolean;
     // pre-processors
@@ -46,7 +47,16 @@ export interface EWAGeneratorOptions {
 }
 
 export interface GeneratorOption extends OptionConfig {
+    /**
+     * When `internal`, this option will never face the user. It is a field used only by internal logic.
+     */
     internal?: boolean;
+
+    /**
+     * This option will only be exposed to the user as a question in verbose mode.
+     */
+    verbose?: boolean;
+
     name: string;
     type: BooleanConstructor | StringConstructor | NumberConstructor | undefined;
 }

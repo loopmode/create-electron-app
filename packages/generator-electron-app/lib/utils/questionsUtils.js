@@ -36,7 +36,7 @@ function initOptions(generator) {
     });
 }
 exports.initOptions = initOptions;
-function getQuestions(values) {
+function getQuestions(values, verbose) {
     const typeMap = {
         Boolean: 'confirm'
     };
@@ -70,50 +70,128 @@ const defaultInternalOptions = {
 };
 function getAnswers(generator, cliValues, defaults) {
     return __awaiter(this, void 0, void 0, function* () {
-        const result = Object.assign({}, defaultInternalOptions, { projectName: cliValues.projectName });
-        function getDefaultAnswers() {
-            return questions.reduce((result, question) => {
-                const name = question.name;
-                const value = defaults[name] || question.default;
-                if (value === undefined) {
-                    return result;
-                }
-                return Object.assign({}, result, { [name]: value });
-            }, {});
-        }
-        const questions = getQuestions(defaults);
+        let currentQuestions = getQuestions(defaults);
+        let currentResult = Object.assign({}, defaultInternalOptions, { projectName: cliValues.projectName });
         if (cliValues.projectName && cliValues.yes) {
-            return Object.assign(result, getDefaultAnswers());
+            currentResult = Object.assign({}, currentResult, getDefaultAnswers(currentQuestions, defaults));
+            return currentResult;
         }
         {
-            const nameQuestion = questions.find(question => question.name === 'projectName');
-            if (nameQuestion) {
-                questions.splice(questions.indexOf(nameQuestion), 1);
-            }
-            if (nameQuestion && !result.projectName) {
-                const answers = yield generator.prompt(nameQuestion);
-                result.projectName = answers.projectName;
+            const { result, questions } = yield askProjectNameQuestion({ currentResult, currentQuestions, generator });
+            currentResult = result;
+            currentQuestions = questions;
+        }
+        {
+            const { result, questions, skipQuestions } = yield askSkipQuestion({
+                currentResult,
+                currentQuestions,
+                generator,
+                cliValues,
+                defaults
+            });
+            currentResult = result;
+            currentQuestions = questions;
+            if (skipQuestions) {
+                return currentResult;
             }
         }
         {
-            const yesQuestion = questions.find(question => question.name === 'yes');
-            if (yesQuestion) {
-                questions.splice(questions.indexOf(yesQuestion), 1);
-                const answers = yield generator.prompt(Object.assign({}, yesQuestion, { default: true }));
-                if (answers.yes) {
-                    return Object.assign(result, getDefaultAnswers());
-                }
-            }
+            const { result, questions } = yield askVerboseQuestion({
+                currentResult,
+                currentQuestions,
+                generator,
+                cliValues
+            });
+            currentResult = result;
+            currentQuestions = questions;
         }
-        const notInternal = (question) => {
-            const option = options_1.options.find(o => o.name === question.name);
-            return !(option && option.internal);
-        };
-        const userAnswers = yield generator.prompt(questions.filter(notInternal));
-        return Object.assign(result, userAnswers);
+        const userQuestions = getUserQuestions(currentQuestions, cliValues);
+        const userAnswers = yield generator.prompt(userQuestions);
+        currentResult = Object.assign({}, currentResult, userAnswers);
+        return currentResult;
     });
 }
 exports.getAnswers = getAnswers;
+function askProjectNameQuestion({ currentResult: result, currentQuestions: questions, generator }) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const nameQuestion = questions.find(question => question.name === 'projectName');
+        if (nameQuestion) {
+            questions = questions.filter(question => question !== nameQuestion);
+        }
+        if (nameQuestion && !result.projectName) {
+            const { projectName } = yield generator.prompt(nameQuestion);
+            result = Object.assign({}, result, { projectName });
+        }
+        return { result, questions };
+    });
+}
+function askSkipQuestion({ currentResult: result, currentQuestions: questions, generator, cliValues, defaults }) {
+    return __awaiter(this, void 0, void 0, function* () {
+        let skipQuestions = false;
+        const yesQuestion = questions.find(question => question.name === 'yes');
+        if (yesQuestion) {
+            questions = questions.filter(question => question !== yesQuestion);
+            if (!cliValues.verbose) {
+                const { yes } = yield generator.prompt(Object.assign({}, yesQuestion, { default: true }));
+                if (yes) {
+                    result = Object.assign({}, result, getDefaultAnswers(questions, defaults));
+                    skipQuestions = true;
+                }
+            }
+        }
+        return { questions, result, skipQuestions };
+    });
+}
+function askVerboseQuestion({ currentResult: result, currentQuestions: questions, generator, cliValues }) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const verboseQuestion = questions.find(question => question.name === 'verbose');
+        if (verboseQuestion) {
+            questions = questions.filter(question => question !== verboseQuestion);
+            if (!cliValues.verbose) {
+                const { verbose } = yield generator.prompt(Object.assign({}, verboseQuestion, { default: false }));
+                if (!verbose) {
+                    const verboseDefaults = options_1.options
+                        .filter(o => o.verbose)
+                        .reduce((result, o) => Object.assign(result, { [o.name]: o.default }), {});
+                    result = Object.assign({}, result, verboseDefaults);
+                }
+            }
+        }
+        return { result, questions };
+    });
+}
+function getUserQuestions(questions, cliValues) {
+    const filters = [
+        function internalFilter(question) {
+            const option = options_1.options.find(o => o.name === question.name);
+            return !(option && option.internal);
+        },
+        function verboseFilter(question) {
+            const option = options_1.options.find(o => o.name === question.name);
+            if (option && option.verbose) {
+                return cliValues.verbose || false;
+            }
+            return true;
+        }
+    ];
+    const userQuestions = questions.reduce((result, question) => {
+        if (filters.every(filter => filter(question))) {
+            result.push(question);
+        }
+        return result;
+    }, []);
+    return userQuestions;
+}
+function getDefaultAnswers(questions, defaults) {
+    return questions.reduce((result, question) => {
+        const name = question.name;
+        const value = defaults[name] || question.default;
+        if (value === undefined) {
+            return result;
+        }
+        return Object.assign({}, result, { [name]: value });
+    }, {});
+}
 function applyImplicitOptions(options) {
     if (options.react) {
         if (!options.webpack)

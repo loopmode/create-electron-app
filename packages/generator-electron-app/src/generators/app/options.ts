@@ -6,25 +6,33 @@ export const options: GeneratorOption[] = [
         alias: 'y',
         default: false,
         type: Boolean,
-        description: 'Skip questions and use default values?'
+        description: 'yes: Skip questions and use default values?'
+    },
+    {
+        name: 'verbose',
+        alias: 'v',
+        default: false,
+        type: Boolean,
+        description: 'verbose: Answer all available questions instead of only the common ones?'
     },
     {
         name: 'install',
         alias: 'i',
         default: true,
         type: Boolean,
-        description: 'Install dependencies after setup?'
+        description: 'install: Install dependencies after setup?'
     },
     {
         name: 'yarn',
         default: true,
         type: Boolean,
-        description: 'Use yarn instead of npm?'
+        description: 'yarn: Use yarn instead of npm?'
     },
     {
         name: 'eslint',
         default: true,
         type: Boolean,
+        verbose: true,
         description: 'eslint: Add support for script file linting using eslint?'
     },
     {
@@ -43,6 +51,7 @@ export const options: GeneratorOption[] = [
         name: 'notifications',
         default: false,
         type: Boolean,
+        verbose: true,
         description: 'notifications: Provide OS-level notifications from webpack during development?'
     },
     {
@@ -61,18 +70,21 @@ export const options: GeneratorOption[] = [
         name: 'ejs',
         default: false,
         type: Boolean,
+        verbose: true,
         description: 'ejs: Add support for compiling EJS template files?'
     },
     {
         name: 'nunjucks',
         default: false,
         type: Boolean,
+        verbose: true,
         description: 'nunjucks: Add support for compiling Nunjucks template files?'
     },
     {
         name: 'less',
         default: false,
         type: Boolean,
+        verbose: true,
         description: 'less: Add support for compiling Less style files?'
     },
     {

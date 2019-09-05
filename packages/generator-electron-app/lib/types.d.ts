@@ -9,6 +9,7 @@ export interface RunGeneratorOptions {
 export interface EWAGeneratorOptions {
     projectName?: string;
     yes?: boolean;
+    verbose?: boolean;
     install?: boolean;
     yarn?: boolean;
     typescript?: boolean;
@@ -27,6 +28,7 @@ export interface EWAGeneratorOptions {
 }
 export interface GeneratorOption extends OptionConfig {
     internal?: boolean;
+    verbose?: boolean;
     name: string;
     type: BooleanConstructor | StringConstructor | NumberConstructor | undefined;
 }
