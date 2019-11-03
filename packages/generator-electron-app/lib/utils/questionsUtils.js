@@ -1,9 +1,10 @@
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
         function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
@@ -61,7 +62,7 @@ function getQuestions(values) {
     ];
 }
 function addComputedOptions(options) {
-    return Object.assign({}, options, { projectNameCC: camelcase(options.projectName) });
+    return Object.assign(Object.assign({}, options), { projectNameCC: camelcase(options.projectName) });
 }
 exports.addComputedOptions = addComputedOptions;
 const defaultInternalOptions = {
@@ -70,7 +71,7 @@ const defaultInternalOptions = {
 };
 function getAnswers(generator, cliValues, defaults) {
     return __awaiter(this, void 0, void 0, function* () {
-        const result = Object.assign({}, defaultInternalOptions, { projectName: cliValues.projectName });
+        const result = Object.assign(Object.assign({}, defaultInternalOptions), { projectName: cliValues.projectName });
         function getDefaultAnswers() {
             return questions.reduce((result, question) => {
                 const name = question.name;
@@ -78,7 +79,7 @@ function getAnswers(generator, cliValues, defaults) {
                 if (value === undefined) {
                     return result;
                 }
-                return Object.assign({}, result, { [name]: value });
+                return Object.assign(Object.assign({}, result), { [name]: value });
             }, {});
         }
         const questions = getQuestions(defaults);
@@ -99,7 +100,7 @@ function getAnswers(generator, cliValues, defaults) {
             const yesQuestion = questions.find(question => question.name === 'yes');
             if (yesQuestion) {
                 questions.splice(questions.indexOf(yesQuestion), 1);
-                const answers = yield generator.prompt(Object.assign({}, yesQuestion, { default: true }));
+                const answers = yield generator.prompt(Object.assign(Object.assign({}, yesQuestion), { default: true }));
                 if (answers.yes) {
                     return Object.assign(result, getDefaultAnswers());
                 }

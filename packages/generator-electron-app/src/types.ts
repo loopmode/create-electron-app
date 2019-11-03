@@ -27,6 +27,7 @@ export interface EWAGeneratorOptions {
     // pre-processors
     typescript?: boolean;
     eslint?: boolean;
+    prettier?: boolean;
     less?: boolean;
     sass?: boolean;
     // frameworks
