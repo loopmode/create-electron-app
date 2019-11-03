@@ -1,5 +1,5 @@
 {
-  "name": "electron-webpack-quick-start",
+  "name": "<%= projectName %>",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -19,8 +19,11 @@
       "webpackConfig": "webpack.renderer.config.js"
     }
   },<% } %>
-  "dependencies": {<%if (react) { %>
-    "prop-types": "^15.7.2",
+  "dependencies": {<%if (react) { %><%if (typescript) { %>
+    "@types/react": "^16.8.6",
+    "@types/react-dom": "^16.8.6",
+    "@types/react-hot-loader": "^4.1.0",<% } else { %>
+    "prop-types": "^15.7.2",<% } %>
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-hot-loader": "^4.8.3",<% } %>
@@ -34,7 +37,8 @@
     "electron-webpack-eslint": "^5.0.1",<% } %><%if (typescript) { %>
     "electron-webpack-ts": "^3.2.0",<% } %><%if (ejs) { %>
     "ejs": "^2.6.2",
-    "ejs-html-loader": "^4.0.1",<% } %><%if (eslint && react) { %>
+    "ejs-html-loader": "^4.0.1",<% } %><%if (eslint) { %>
+    "eslint-loader": "^3.0.2",,<% } %><%if (eslint && react) { %>
     "eslint-plugin-react": "^7.12.4",<% } %><%if (less) { %>
     "less": "^3.10.1",
     "less-loader": "^5.0.0",<% } %><%if (nunjucks) { %>
