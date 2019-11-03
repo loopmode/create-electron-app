@@ -1,5 +1,5 @@
 {
-  "version": "0.1.2",
+  "version": "0.1.3",
   "name": "@loopmode/yo-transform-filenames",
   "description": "Template logic for filenames",
   "main": "lib/index.js",
