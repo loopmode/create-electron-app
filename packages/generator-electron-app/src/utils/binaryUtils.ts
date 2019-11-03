@@ -21,14 +21,15 @@ const knownBinaryExtensions = [...binaryExtensions, 'eps'];
  * @param dir path to the template source
  * @param ignoreExtensions array of file extensions to ignore
  */
-export function getBinaryFiles(dir: string, ignoredExtensions: string[] = []): string[] {
-    return glob.sync(`**/*.{${[...knownBinaryExtensions, ...ignoredExtensions].join(',')}}`, {
-        cwd: path.resolve(dir)
+export function getBinaryFiles(dir: string, ignoreGlobs?: string[] | Set<string>): string[] {
+    return glob.sync(`**/*.{${knownBinaryExtensions.join(',')}}`, {
+        cwd: path.resolve(dir),
+        ignore: ignoreGlobs && [...ignoreGlobs]
     });
 }
 
 export function getBinaryIgnoreGlobs(files: string[]): Set<string> {
-    const globs = files.map(file => `!**/*${path.extname(file)}`);
+    const globs = files.map(file => `**/*${path.extname(file)}`);
     // using Set to drop duplicates from the array
     return new Set(globs);
 }

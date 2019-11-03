@@ -49,7 +49,13 @@ exports.options = [
         name: 'react',
         default: false,
         type: Boolean,
-        description: 'react: Add support for compiling JSX files?'
+        description: 'react: Configure for React development?'
+    },
+    {
+        name: 'vue',
+        default: false,
+        type: Boolean,
+        description: 'vue: Configure for Vue development?'
     },
     {
         name: 'ejs',

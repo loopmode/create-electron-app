@@ -1,6 +1,6 @@
 {
   "name": "@loopmode/generator-electron-app",
-  "version": "0.2.1",
+  "version": "0.3.2",
   "main": "lib/index.js",
   "license": "MIT",
   "repository": {
@@ -27,16 +27,19 @@
     "watch": "tsc --watch"
   },
   "dependencies": {
+    "@loopmode/yo-transform-filenames": "^0.1.1",
     "@types/fs-extra": "^8.0.0",
     "@types/gulp-rename": "^0.0.33",
     "@types/yeoman-environment": "^2.3.2",
     "@types/yeoman-generator": "^3.1.4",
+    "@types/yosay": "^0.0.29",
     "binary-extensions": "^2.0.0",
     "camelcase": "^5.3.1",
     "fs-extra": "^8.1.0",
     "gulp-rename": "1.2.2",
     "yeoman-environment": "^2.4.0",
-    "yeoman-generator": "^4.0.1"
+    "yeoman-generator": "^4.0.1",
+    "yosay": "^2.0.2"
   },
   "gitHead": "8f1a9e43a6f0a8a0a9fc46b5e4f7c5bb6213a9ed"
 }
