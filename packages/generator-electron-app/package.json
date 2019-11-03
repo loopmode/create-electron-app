@@ -1,6 +1,6 @@
 {
   "name": "@loopmode/generator-electron-app",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "main": "lib/index.js",
   "license": "MIT",
   "repository": {
@@ -27,7 +27,7 @@
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "@loopmode/yo-transform-filenames": "^0.1.1",
+    "@loopmode/yo-transform-filenames": "^0.1.2",
     "@types/fs-extra": "^8.0.0",
     "@types/gulp-rename": "^0.0.33",
     "@types/yeoman-environment": "^2.3.2",
