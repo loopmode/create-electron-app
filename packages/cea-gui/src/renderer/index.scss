@@ -1,0 +1,12 @@
+@charset "utf-8";
+@import '~bulma/sass/utilities/initial-variables';
+@import '~bulma/bulma';
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        @extend .is-#{$i};
+        &:not(.subtitle) {
+            @extend .title;
+        }
+    }
+}

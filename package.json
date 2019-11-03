@@ -13,7 +13,7 @@
     "test": "lerna run test --stream",
     "test:watch": "lerna run test:watch --stream",
     "test:run": "rm -rf foo && cross-env DEBUG=yeoman:generator packages/create-electron-app/lib/index.js",
-    "start:gui": "cd packages/cea-gui && yarn dev"
+    "gui": "cd packages/cea-gui && yarn dev"
   },
   "workspaces": {
     "packages": [
