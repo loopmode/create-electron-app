@@ -8,7 +8,7 @@ export const Home = () => {
             <AppHeader />
             <section className="section">
                 <div className="container">
-                    <Link to="/create">Create new app</Link>
+                    <Link to="/create-project">Create new app</Link>
                 </div>
             </section>
         </div>
