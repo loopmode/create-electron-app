@@ -10,6 +10,7 @@
     "build": "lerna run build --stream",
     "rebuild": "rm -rf packages/**/lib && rm -f packages/**/.tsbuildinfo && yarn build",
     "watch": "lerna run watch --parallel --stream",
+    "dev": "cd packages/cea-gui && yarn dev",
     "test": "rm -rf foo && cross-env DEBUG=yeoman:generator packages/create-electron-app/lib/index.js"
   },
   "workspaces": {
