@@ -36,6 +36,12 @@ exports.options = [
         description: 'eslint: Add support for script file linting using eslint?'
     },
     {
+        name: 'prettier',
+        default: true,
+        type: Boolean,
+        description: 'prettier: Add prettier integration?'
+    },
+    {
         name: 'webpack',
         default: false,
         type: Boolean,

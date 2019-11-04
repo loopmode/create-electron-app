@@ -8,15 +8,22 @@ module.exports = {
     'eslint:recommended'<% if (react) { %>,
     'plugin:react/recommended'<% } %><% if (vue) { %>,
     'plugin:vue/recommended',
-    '@vue/prettier',
+    '@vue/prettier'
+    <% } %>,<% if (typescript) { %>
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",<% } %>
     'plugin:prettier/recommended'
-    <% } %>
   ], 
-  <% if (!vue) { %>parser: 'babel-eslint',<% } %>
+  <% if (!vue && !typescript) { %>parser: 'babel-eslint',<% } %>
+  <% if (typescript) { %>parser: '@typescript-eslint/parser',<% } %>
+
   parserOptions: {
-    <% if (vue) { %>parser: 'babel-eslint',<% } %>
     sourceType: 'module'
-  },
+  },  
+  plugins: [
+    <% if (typescript) { %>'@typescript-eslint'<% } %>
+  ],
+
   globals: {
     __static: true
   },<%if (react) { %>
@@ -27,7 +34,10 @@ module.exports = {
   },<% } %>
   rules: {<%if (react) { %>
     // allow anonymous component functions
-    'react/display-name': 0,<% } %>
+    'react/display-name': 0,<% } %><%if (react && typescript) { %>
+    // disable prop-types when using typescript
+    'react/prop-types': 'off',
+    <% } %>
     // allow spreading out properties from an object without warnings
     'no-unused-vars': [1, { ignoreRestSiblings: true }],
  

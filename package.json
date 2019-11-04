@@ -12,7 +12,8 @@
     "rebuild": "rm -rf packages/**/lib && rm -f packages/**/.tsbuildinfo && yarn build",
     "test": "lerna run test --stream",
     "test:watch": "lerna run test:watch --stream",
-    "test:run": "rm -rf foo && cross-env DEBUG=yeoman:generator packages/create-electron-app/lib/index.js"
+    "test:run": "rm -rf foo && cross-env DEBUG=yeoman:generator packages/create-electron-app/lib/index.js",
+    "gui": "cd packages/cea-gui && yarn dev"
   },
   "workspaces": {
     "packages": [

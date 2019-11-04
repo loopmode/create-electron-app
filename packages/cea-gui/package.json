@@ -1,0 +1,60 @@
+{
+  "private": true,
+  "name": "@loopmode/cea-gui",
+  "version": "0.0.2",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "dist": "yarn compile && electron-builder",
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
+  },
+  "resolutions": {
+    "js-yaml": "3.13.1"
+  },
+  "electronWebpack": {
+    "main": {
+      "webpackConfig": "webpack.main.config.js"
+    },
+    "renderer": {
+      "webpackConfig": "webpack.renderer.config.js"
+    }
+  },
+  "dependencies": {
+    "@types/classnames": "^2.2.9",
+    "@types/react": "^16.8.6",
+    "@types/react-dom": "^16.8.6",
+    "@types/react-helmet": "^5.0.14",
+    "@types/react-hot-loader": "^4.1.0",
+    "@types/react-router-dom": "^5.1.2",
+    "bulma": "^0.8.0",
+    "bulma-steps": "^2.2.1",
+    "classnames": "^2.2.6",
+    "eslint-config-prettier": "^6.5.0",
+    "formik": "^2.0.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "react-hot-loader": "^4.8.3",
+    "react-router-dom": "^5.1.2",
+    "source-map-support": "^0.5.12"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.3.1",
+    "@typescript-eslint/parser": "^2.3.1",
+    "electron": "5.0.6",
+    "electron-builder": "^21.0.11",
+    "electron-webpack": "^2.7.4",
+    "electron-webpack-eslint": "^5.0.1",
+    "electron-webpack-ts": "^3.2.0",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.12.4",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.18.2",
+    "sass-loader": "^7.2.0",
+    "typescript": "^3.5.3",
+    "webpack": "~4.35.3"
+  }
+}
