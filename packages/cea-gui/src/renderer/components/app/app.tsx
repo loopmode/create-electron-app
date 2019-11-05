@@ -3,10 +3,10 @@ import { hot } from 'react-hot-loader/root';
 
 import Helmet from 'react-helmet';
 import { HashRouter, Switch, Route } from 'react-router-dom';
-import { Home } from './components/Home';
 
-import { Create } from './components/Create/Create';
-import staticPath from './utils/static-path';
+import staticPath from 'renderer/utils/static-path';
+import { Home } from 'renderer/components/screen-home/screen-home';
+import { Create } from 'renderer/components/screen-create-project/screen-create-project';
 
 const App: React.FC<{}> = () => {
     return (

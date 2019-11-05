@@ -1,8 +1,9 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
-// import { Field } from 'formik';
+import { Link } from 'react-router-dom';
+import { Field } from 'formik';
+import { StepFormProps } from 'renderer/components/step-form/step-form-props';
 
-export const StartForm: React.FC<{}> = () => {
+export const ProjectBasicsForm: React.FC<StepFormProps> = props => {
     return (
         <>
             <div className="step-content has-text-centered is-active">
@@ -13,7 +14,7 @@ export const StartForm: React.FC<{}> = () => {
                     <div className="field-body">
                         <div className="field">
                             <div className="control">
-                                <input
+                                <Field
                                     className="input"
                                     name="projectName"
                                     placeholder="Project name"
@@ -31,7 +32,12 @@ export const StartForm: React.FC<{}> = () => {
                     <div className="field-body">
                         <div className="field">
                             <div className="control has-icon has-icon-right">
-                                <input className="input" name="scope" placeholder="scope" data-validate="require" />
+                                <Field
+                                    className="input"
+                                    name="projectScope"
+                                    placeholder="scope"
+                                    data-validate="require"
+                                />
                             </div>
                         </div>
                     </div>
@@ -40,15 +46,15 @@ export const StartForm: React.FC<{}> = () => {
             <hr />
             <div className="steps-actions is-flex">
                 <div className="steps-action">
-                    <a href="#" data-nav="previous" className="button is-light is-disabled">
+                    <Link to={props.prev} data-nav="previous" className="button is-light">
                         Previous
-                    </a>
+                    </Link>
                 </div>
                 <span style={{ flex: 1 }} />
                 <div className="steps-action">
-                    <a href="#" data-nav="next" className="button is-light">
+                    <Link to={props.next} data-nav="next" className="button is-light">
                         Next
-                    </a>
+                    </Link>
                 </div>
             </div>
         </>

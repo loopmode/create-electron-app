@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { AppHeader } from './AppHeader';
+import { AppHeader } from 'renderer/components/app/app-header';
 
 export const Home = () => {
     return (

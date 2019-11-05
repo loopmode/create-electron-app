@@ -9,11 +9,11 @@
   "scripts": {
     "build": "lerna run build --stream",
     "watch": "lerna run watch --parallel --stream",
-    "rebuild": "rm -rf packages/**/lib && rm -f packages/**/.tsbuildinfo && yarn build",
     "test": "lerna run test --stream",
     "test:watch": "lerna run test:watch --stream",
     "test:run": "rm -rf foo && cross-env DEBUG=yeoman:generator packages/create-electron-app/lib/index.js",
-    "gui": "cd packages/cea-gui && yarn dev"
+    "gui": "cd packages/cea-gui && yarn dev",
+    "rebuild": "npm rebuild && lerna run rebuild --stream"
   },
   "workspaces": {
     "packages": [

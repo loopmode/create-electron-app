@@ -4,7 +4,7 @@ import { NavLinkProps } from 'react-router-dom';
 import { NavLink, Route } from 'react-router-dom';
 // import cx from 'classnames';
 
-export const BreadcrumbStep: React.FC<NavLinkProps & { completed?: boolean; index: number }> = ({
+export const StepBreadcrumbItem: React.FC<NavLinkProps & { completed?: boolean; index: number }> = ({
     index,
     completed,
     ...props

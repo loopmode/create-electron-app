@@ -25,7 +25,9 @@
     "build": "tsc",
     "watch": "tsc --watch",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "clean": "rm -rf lib && rm -f .tsbuildinfo",
+    "rebuild": "yarn clean && yarn build"
   },
   "dependencies": {
     "@types/ejs": "^2.6.3",

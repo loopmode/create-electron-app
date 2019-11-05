@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "electron-webpack dev",
     "compile": "electron-webpack",
+    "rebuild": "electron-builder install-app-deps",
     "dist": "yarn compile && electron-builder",
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
   },
@@ -27,6 +28,7 @@
     "@types/react-helmet": "^5.0.14",
     "@types/react-hot-loader": "^4.1.0",
     "@types/react-router-dom": "^5.1.2",
+    "@types/styled-components": "^4.1.20",
     "bulma": "^0.8.0",
     "bulma-steps": "^2.2.1",
     "classnames": "^2.2.6",
@@ -37,7 +39,8 @@
     "react-helmet": "^5.2.1",
     "react-hot-loader": "^4.8.3",
     "react-router-dom": "^5.1.2",
-    "source-map-support": "^0.5.12"
+    "source-map-support": "^0.5.12",
+    "styled-components": "^4.4.1"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.0.0",

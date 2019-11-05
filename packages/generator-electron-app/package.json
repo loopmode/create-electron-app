@@ -24,7 +24,9 @@
   ],
   "scripts": {
     "build": "tsc",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "clean": "rm -rf lib && rm -f .tsbuildinfo",
+    "rebuild": "yarn clean && yarn build"
   },
   "dependencies": {
     "@loopmode/yo-transform-filenames": "^0.1.3",
