@@ -4,22 +4,34 @@
 @import '~bulma-steps/dist/css/bulma-steps';
 
 @for $i from 1 through 6 {
-    h#{$i} {
-        @extend .is-#{$i};
-        &:not(.subtitle) {
-            @extend .title;
-        }
+  h#{$i} {
+    @extend .is-#{$i};
+    &:not(.subtitle) {
+      @extend .title;
     }
+  }
 }
 
 .is-disabled {
-    &,
-    & * {
-        pointer-events: none;
-        cursor: default;
-    }
+  &,
+  & * {
+    pointer-events: none;
+    cursor: default;
+  }
 }
 
 .has-text-grey a {
-    color: $grey-light;
+  color: $grey-light;
+}
+
+.has-focusable-children:focus-within {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+@import 'scss/mixins/variate';
+html,
+body {
+  $sizes: (0rem, 0.5rem, 1.5rem, 2rem, 3rem, auto);
+  @include variate(margin, $sizes);
+  @include variate(padding, $sizes);
 }

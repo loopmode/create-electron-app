@@ -1,4 +1,4 @@
 export interface StepFormProps {
-    prev: string;
-    next: string;
+  prev: string;
+  next: string;
 }

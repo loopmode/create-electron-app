@@ -11,8 +11,8 @@ import * as url from 'url';
  * @return {string} - filepath that can be required
  */
 export default function staticPath(resourcePath: string): string {
-    if (process.env.NODE_ENV === 'production') {
-        return path.resolve(__static, resourcePath);
-    }
-    return url.resolve(window.location.origin, resourcePath);
+  if (process.env.NODE_ENV === 'production') {
+    return path.resolve(__static, resourcePath);
+  }
+  return url.resolve(window.location.origin, resourcePath);
 }
