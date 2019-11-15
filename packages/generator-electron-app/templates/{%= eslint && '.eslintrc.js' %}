@@ -8,24 +8,22 @@ module.exports = {
     'eslint:recommended'<% if (react) { %>,
     'plugin:react/recommended'<% } %><% if (vue) { %>,
     'plugin:vue/recommended',
-    '@vue/prettier'
-    <% } %>,<% if (typescript) { %>
+    '@vue/prettier'<% } %>,<% if (typescript) { %>
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",<% } %>
     'plugin:prettier/recommended'
   ], 
-  <% if (vue) { %>parser: 'vue-eslint-parser',<% } %>
-  <% if (!vue && !typescript) { %>parser: 'babel-eslint',<% } %>
-  <% if (typescript) { %>parser: '@typescript-eslint/parser',<% } %>
+  <% if (vue) { -%>parser: 'vue-eslint-parser',<% } -%>
+  <% if (!vue && !typescript) { -%>parser: 'babel-eslint',<% } -%>
+  <% if (!vue && typescript) { -%>parser: '@typescript-eslint/parser',<% } -%>
 
   parserOptions: {
-    <% if (typescript && vue) { %>parser: '@typescript-eslint/parser',<% } %>
+    <% if (vue && typescript) { %>parser: '@typescript-eslint/parser',<% } %>
     sourceType: 'module'
   },  
   plugins: [
     <% if (typescript) { %>'@typescript-eslint'<% } %>
   ],
-
   globals: {
     __static: true
   },<%if (react) { %>
