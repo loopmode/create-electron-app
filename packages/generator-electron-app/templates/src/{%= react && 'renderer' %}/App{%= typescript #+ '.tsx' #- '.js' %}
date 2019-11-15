@@ -1,9 +1,9 @@
-import electron from 'electron'
+import electron from 'electron';
 
-import React from 'react'
-import { hot } from 'react-hot-loader/root'
+import React from 'react';
+import { hot } from 'react-hot-loader/root';
 
-import './App.css'
+import './App<%= sass ? '.scss' : less ? '.less' : '.css'%>';
 
 function App() {
   return (
@@ -45,7 +45,7 @@ function App() {
         <code>src/renderer/index.js</code>.
       </p>
     </div>
-  )
+  );
 }
 
-export default hot(App)
+export default hot(App);

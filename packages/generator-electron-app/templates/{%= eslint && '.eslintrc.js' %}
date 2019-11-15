@@ -14,10 +14,12 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",<% } %>
     'plugin:prettier/recommended'
   ], 
+  <% if (vue) { %>parser: 'vue-eslint-parser',<% } %>
   <% if (!vue && !typescript) { %>parser: 'babel-eslint',<% } %>
   <% if (typescript) { %>parser: '@typescript-eslint/parser',<% } %>
 
   parserOptions: {
+    <% if (typescript && vue) { %>parser: '@typescript-eslint/parser',<% } %>
     sourceType: 'module'
   },  
   plugins: [
@@ -42,6 +44,9 @@ module.exports = {
     'no-unused-vars': [1, { ignoreRestSiblings: true }],
  
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    
+    // allow implicit return types
+    '@typescript-eslint/explicit-function-return-type': 'off'
   }
 }

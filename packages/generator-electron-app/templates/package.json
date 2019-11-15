@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "<%= projectName %>",
+  "name": "<%= projectName.substr(projectName.lastIndexOf('./') + 2) %>",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -11,15 +11,7 @@
   },
   "resolutions": {
     "js-yaml": "3.13.1"
-  },<%if (electronWebpackConfig) { %>
-  "electronWebpack": {
-    "main": {
-      "webpackConfig": "webpack.main.config.js"
-    },
-    "renderer": {
-      "webpackConfig": "webpack.renderer.config.js"
-    }
-  },<% } %>
+  },
   "dependencies": {<%if (react) { %><%if (typescript) { %>
     "@types/react": "^16.8.6",
     "@types/react-dom": "^16.8.6",
@@ -53,9 +45,9 @@
     "less-loader": "^5.0.0",<% } %><%if (nunjucks) { %>
     "nunjucks": "^3.2.0",
     "nunjucks-loader": "^3.0.0",<% } %><%if (sass) { %>
-    "node-sass": "^4.12.0",<%if (prettier) { %>
-    "prettier": "^1.18.2",<% } %>
-    "sass-loader": "^7.2.0",<% } %><%if (typescript) { %>
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.2.0",<% } %><%if (prettier) { %>
+    "prettier": "^1.18.2",<% } %><%if (typescript) { %>
     "typescript": "^3.5.3",<% } %>
     "webpack": "~4.35.3"<%if (notifications) { %>,
     "webpack-build-notifier": "^1.0.3"<% } %>
