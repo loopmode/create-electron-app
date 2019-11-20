@@ -1,8 +1,6 @@
 import React from 'react';
+import { Icon } from '../icon/Icon';
 export const CaretIcon: React.FC<{
+  className?: string;
   dir: 'up' | 'down' | 'left' | 'right';
-}> = props => (
-  <span className="icon is-small" key={props.dir}>
-    <i className={`fas fa-angle-${props.dir}`} aria-hidden="true"></i>
-  </span>
-);
+}> = ({ dir, ...props }) => <Icon icon={`fa-angle-${dir}`} {...props} />;
