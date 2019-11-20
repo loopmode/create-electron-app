@@ -1,7 +1,24 @@
 @charset "utf-8";
+
 @import '~bulma/sass/utilities/initial-variables';
 @import '~bulma/bulma';
-@import '~bulma-steps/dist/css/bulma-steps';
+@import '~bulma-checkradio';
+@import '~@loopmode/scss-variate';
+
+$sizes: (0, 0.75rem, 1.5rem, 3rem);
+@include variate(margin, $sizes);
+@include variate(padding, $sizes);
+
+.is-v-centered {
+  align-items: center;
+}
+.is-flex-1 {
+  flex: 1;
+}
+.is-flex > .is-pulled-right {
+  float: none !important;
+  margin-left: auto;
+}
 
 @for $i from 1 through 6 {
   h#{$i} {
@@ -10,28 +27,4 @@
       @extend .title;
     }
   }
-}
-
-.is-disabled {
-  &,
-  & * {
-    pointer-events: none;
-    cursor: default;
-  }
-}
-
-.has-text-grey a {
-  color: $grey-light;
-}
-
-.has-focusable-children:focus-within {
-  outline: -webkit-focus-ring-color auto 5px;
-}
-
-@import 'scss/mixins/variate';
-html,
-body {
-  $sizes: (0rem, 0.5rem, 1.5rem, 2rem, 3rem, auto);
-  @include variate(margin, $sizes);
-  @include variate(padding, $sizes);
 }

@@ -7,6 +7,11 @@
       "renderer/*": [
         "src/renderer/*"
       ]
-    }
-  }
+    },
+    "allowSyntheticDefaultImports": true,
+  },
+  "exclude": [
+    "lib",
+    "dist"
+  ]
 }
