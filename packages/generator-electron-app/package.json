@@ -1,6 +1,6 @@
 {
   "name": "@loopmode/generator-electron-app",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "main": "lib/index.js",
   "license": "MIT",
   "repository": {
@@ -30,7 +30,7 @@
     "lint": "eslint src --ext .ts,.tsx"
   },
   "dependencies": {
-    "@loopmode/yo-transform-filenames": "^0.1.4",
+    "@loopmode/yo-transform-filenames": "^0.1.5",
     "@types/fs-extra": "^8.0.0",
     "@types/gulp-rename": "^0.0.33",
     "@types/yeoman-environment": "^2.3.2",
