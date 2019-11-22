@@ -1,7 +1,13 @@
 {
-  "typescript.validate.enable": true,
+  "typescript.validate.enable": false,
   "editor.formatOnSave": true,
   "files.associations": {
     "**/templates/**/*.*": "plaintext"
-  }
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ]
 }

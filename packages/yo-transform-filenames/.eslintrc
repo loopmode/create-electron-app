@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "@local/base",
+    "@local/typescript"
+  ]
+}

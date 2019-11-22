@@ -1,7 +1,7 @@
 {
   "version": "0.0.1",
   "private": true,
-  "name": "@local/eslint-config",
+  "name": "@local/eslint-config-base",
   "main": ".eslintrc.js",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2.8.0",

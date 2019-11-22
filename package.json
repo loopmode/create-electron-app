@@ -11,12 +11,14 @@
     "watch": "lerna run watch --parallel --stream",
     "test": "lerna run test --stream",
     "test:watch": "lerna run test:watch --stream",
-    "test:run": "rm -rf foo && cross-env DEBUG=yeoman:generator packages/create-electron-app/lib/index.js",
+    "test:run": "cross-env DEBUG=yeoman:generator packages/create-electron-app/lib/index.js ../foo",
     "gui": "cd packages/cea-gui && yarn dev",
-    "rebuild": "npm rebuild && lerna run rebuild --stream"
+    "rebuild": "npm rebuild && lerna run rebuild --stream",
+    "lint": "lerna run lint --stream"
   },
   "workspaces": {
     "packages": [
+      "local/*",
       "packages/*"
     ]
   },
