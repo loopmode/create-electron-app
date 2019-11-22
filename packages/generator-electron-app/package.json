@@ -26,7 +26,8 @@
     "build": "tsc",
     "watch": "tsc --watch",
     "clean": "rm -rf lib && rm -f .tsbuildinfo",
-    "rebuild": "yarn clean && yarn build"
+    "rebuild": "yarn clean && yarn build",
+    "lint": "eslint src --ext .ts,.tsx"
   },
   "dependencies": {
     "@loopmode/yo-transform-filenames": "^0.1.3",
@@ -42,6 +43,11 @@
     "yeoman-environment": "^2.4.0",
     "yeoman-generator": "^4.0.1",
     "yosay": "^2.0.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.8.0",
+    "@typescript-eslint/parser": "^2.8.0",
+    "eslint": "^6.6.0"
   },
   "gitHead": "8f1a9e43a6f0a8a0a9fc46b5e4f7c5bb6213a9ed"
 }

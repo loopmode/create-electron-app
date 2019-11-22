@@ -8,10 +8,10 @@
  * Delimiters - special character sequences used in the conditional syntax
  */
 export const Delimiters = {
-    VARNAME_START: '%',
-    BOOLEAN_AND: ' && ',
-    TERNARY_AND: ' == ',
-    TERNARY_OR: ' !! '
+  VARNAME_START: '%',
+  BOOLEAN_AND: ' && ',
+  TERNARY_AND: ' == ',
+  TERNARY_OR: ' !! '
 };
 
 /**
@@ -23,7 +23,7 @@ export const Delimiters = {
  * - index.%varname == .ts ## .js
  */
 export const DEFAULT_CONDITIONAL_SYNTAX_REGEXP = new RegExp(
-    `(.*)${Delimiters.VARNAME_START}(.*)(${Delimiters.BOOLEAN_AND}|${Delimiters.TERNARY_AND})(.*)(?:${Delimiters.TERNARY_OR})?(.*)?`
+  `(.*)${Delimiters.VARNAME_START}(.*)(${Delimiters.BOOLEAN_AND}|${Delimiters.TERNARY_AND})(.*)(?:${Delimiters.TERNARY_OR})?(.*)?`
 );
 
 /**
@@ -35,9 +35,9 @@ export const DEFAULT_CONDITIONAL_SYNTAX_REGEXP = new RegExp(
  * @return {array<string>} glob patterns for excluding files
  */
 export const DEFAULT_CREATE_IGNORE_GLOBS = (key: string, value: unknown) => {
-    const varname = value ? `!${key}` : key;
-    const glob = `**/*${Delimiters.VARNAME_START}${varname}${Delimiters.BOOLEAN_AND}*`;
-    return [glob, `${glob}/*`];
+  const varname = value ? `!${key}` : key;
+  const glob = `**/*${Delimiters.VARNAME_START}${varname}${Delimiters.BOOLEAN_AND}*`;
+  return [glob, `${glob}/*`];
 };
 
 /**
@@ -49,8 +49,8 @@ export const DEFAULT_CREATE_IGNORE_GLOBS = (key: string, value: unknown) => {
  * @param {*} [createGlob] - A `(key:string, value:any):string|string[]` function that takes a variable and returns a glob
  */
 export function getConditionalSyntaxIgnoreGlobs(context: {}, createGlob = DEFAULT_CREATE_IGNORE_GLOBS): string[] {
-    return Object.entries(context).reduce((result: string[], [key, value]) => {
-        const globs = createGlob(key, value);
-        return [...result, ...(Array.isArray(globs) ? globs : [globs])];
-    }, []);
+  return Object.entries(context).reduce((result: string[], [key, value]) => {
+    const globs = createGlob(key, value);
+    return [...result, ...(Array.isArray(globs) ? globs : [globs])];
+  }, []);
 }

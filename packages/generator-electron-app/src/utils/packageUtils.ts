@@ -1,23 +1,23 @@
 import path from 'path';
-import yoenv, { RunDone } from 'yeoman-environment';
+import yoenv from 'yeoman-environment';
 import { run, exec, createTempDir } from './shellUtils';
 
 export const MAGIC_DEFAULT_SCOPE: string = '@@';
 export const DEFAULT_SCOPE: string = '@mono';
 
 export interface PackageDescriptor {
-    packageName: string;
-    packageScope: string;
+  packageName: string;
+  packageScope: string;
 }
 
 export interface GeneratorDescriptor {
-    yoName: string;
-    packageName: string;
+  yoName: string;
+  packageName: string;
 }
 
 export interface AuthorDescriptor {
-    authorName: string;
-    authorEmail: string;
+  authorName: string;
+  authorEmail: string;
 }
 
 /**
@@ -25,34 +25,34 @@ export interface AuthorDescriptor {
  * @return {string} The fixed package name
  */
 export function normalize(name: string): string {
-    let { packageScope, packageName } = splitName(name);
+  let { packageScope, packageName } = splitName(name);
 
-    // user provided foo/bar instead of @foo/bar
-    if (packageScope && packageScope[0] !== '@') {
-        packageScope = `@${packageScope}`;
-    }
-    // user provided e.g. @@/foo instead of @mono/foo
-    if (packageScope === MAGIC_DEFAULT_SCOPE) {
-        packageScope = DEFAULT_SCOPE;
-    }
+  // user provided foo/bar instead of @foo/bar
+  if (packageScope && packageScope[0] !== '@') {
+    packageScope = `@${packageScope}`;
+  }
+  // user provided e.g. @@/foo instead of @mono/foo
+  if (packageScope === MAGIC_DEFAULT_SCOPE) {
+    packageScope = DEFAULT_SCOPE;
+  }
 
-    return joinName({ packageScope, packageName });
+  return joinName({ packageScope, packageName });
 }
 
 /**
  * Takes a package name and returns an object with explicit `packageScope` and `packageName` properties.
  */
 export function splitName(name: string): PackageDescriptor {
-    let packageName = '';
-    let packageScope = '';
-    if (name) {
-        [packageScope, packageName] = name.split('/');
-        if (packageScope && !packageName) {
-            packageName = packageScope;
-            packageScope = '';
-        }
+  let packageName = '';
+  let packageScope = '';
+  if (name) {
+    [packageScope, packageName] = name.split('/');
+    if (packageScope && !packageName) {
+      packageName = packageScope;
+      packageScope = '';
     }
-    return { packageName, packageScope };
+  }
+  return { packageName, packageScope };
 }
 
 /**
@@ -62,13 +62,13 @@ export function splitName(name: string): PackageDescriptor {
  * @param {string} options.packageName
  */
 export function joinName({ packageName, packageScope }: PackageDescriptor): string {
-    if (!packageName) {
-        throw new Error('packageName is required');
-    }
-    if (packageScope) {
-        return `${packageScope}/${packageName}`;
-    }
-    return packageName;
+  if (!packageName) {
+    throw new Error('packageName is required');
+  }
+  if (packageScope) {
+    return `${packageScope}/${packageName}`;
+  }
+  return packageName;
 }
 
 /**
@@ -79,11 +79,11 @@ export function joinName({ packageName, packageScope }: PackageDescriptor): stri
  * @return {string} a generator name suitable for usage with yeoman
  */
 export function getGeneratorPackageName(name: string, PREFIX: string = 'generator-'): string {
-    let { packageScope, packageName } = splitName(name);
+  let { packageScope, packageName } = splitName(name);
 
-    packageName = packageName.startsWith(PREFIX) ? packageName : `${PREFIX}${packageName}`;
+  packageName = packageName.startsWith(PREFIX) ? packageName : `${PREFIX}${packageName}`;
 
-    return normalize(joinName({ packageScope, packageName }));
+  return normalize(joinName({ packageScope, packageName }));
 }
 
 /**
@@ -94,18 +94,18 @@ export function getGeneratorPackageName(name: string, PREFIX: string = 'generato
  * @return {string} a regular package name
  */
 export function getGeneratorYoName(name: string, PREFIX: string = 'generator-'): string {
-    name = getGeneratorPackageName(name);
-    name = name.replace(PREFIX, '');
-    return name;
+  name = getGeneratorPackageName(name);
+  name = name.replace(PREFIX, '');
+  return name;
 }
 
 export function getGeneratorNames(name: string): GeneratorDescriptor {
-    const packageName = getGeneratorPackageName(name);
-    const yoName = getGeneratorYoName(name);
-    return {
-        yoName,
-        packageName
-    };
+  const packageName = getGeneratorPackageName(name);
+  const yoName = getGeneratorYoName(name);
+  return {
+    yoName,
+    packageName
+  };
 }
 
 /**
@@ -115,13 +115,13 @@ export function getGeneratorNames(name: string): GeneratorDescriptor {
  * @param {*} yo A yeoman environment created via `require('yeoman-environment').createEnv()`
  */
 export function runGenerator(generatorName: string, generatorArgs: string[] = [], yo: yoenv): Promise<unknown | Error> {
-    return new Promise((resolve, reject) => {
-        try {
-            yo.lookup(() => yo.run([generatorName, ...generatorArgs], resolve));
-        } catch (error) {
-            reject(error);
-        }
-    });
+  return new Promise((resolve, reject) => {
+    try {
+      yo.lookup(() => yo.run([generatorName, ...generatorArgs], resolve));
+    } catch (error) {
+      reject(error);
+    }
+  });
 }
 
 /**
@@ -130,13 +130,13 @@ export function runGenerator(generatorName: string, generatorArgs: string[] = []
  * @return {string|null} path to installed package
  */
 export async function resolvePackagePath(name: string): Promise<string | null> {
-    try {
-        const jsonPath = require.resolve(`${name}/package.json`);
-        const packagePath = path.dirname(jsonPath);
-        return packagePath;
-    } catch (err) {
-        return null;
-    }
+  try {
+    const jsonPath = require.resolve(`${name}/package.json`);
+    const packagePath = path.dirname(jsonPath);
+    return packagePath;
+  } catch (err) {
+    return null;
+  }
 }
 
 /**
@@ -145,8 +145,8 @@ export async function resolvePackagePath(name: string): Promise<string | null> {
  * @return {string|null} path to installed package
  */
 export async function isPackageInstalled(name: string): Promise<boolean> {
-    const packagePath = await resolvePackagePath(name);
-    return packagePath !== null;
+  const packagePath = await resolvePackagePath(name);
+  return packagePath !== null;
 }
 
 /**
@@ -156,36 +156,36 @@ export async function isPackageInstalled(name: string): Promise<boolean> {
  * @param {boolean} force Whether to install the package again even when it is already installed
  */
 export async function installPackage(name: string, force: boolean): Promise<void | Error> {
-    if (!force && (await isPackageInstalled(name))) {
-        console.log(`>> package ${name} is already installed`);
-        return;
-    }
+  if (!force && (await isPackageInstalled(name))) {
+    console.log(`>> package ${name} is already installed`);
+    return;
+  }
 
-    console.log(`>> install package ${name}`);
-    await run(`npm install --global ${name}`);
+  console.log(`>> install package ${name}`);
+  await run(`npm install --global ${name}`);
 }
 
 export function joinAuthor({ authorName, authorEmail }: AuthorDescriptor): string {
-    if (authorName && authorEmail) {
-        return `${authorName} <${authorEmail}>`;
-    }
-    return authorName;
+  if (authorName && authorEmail) {
+    return `${authorName} <${authorEmail}>`;
+  }
+  return authorName;
 }
 
 export async function downloadPackage(name: string): Promise<string | null> {
-    const dir = createTempDir(name);
+  const dir = createTempDir(name);
 
-    const { stdout: packLog } = await exec(`cd ${dir} && npm pack ${name}`);
+  const { stdout: packLog } = await exec(`cd ${dir} && npm pack ${name}`);
 
-    const filename = packLog
-        .split('/')
-        .pop()
-        .trim();
+  const filename = packLog
+    .split('/')
+    .pop()
+    .trim();
 
-    if (filename) {
-        await exec(`cd ${dir} && tar -zxvf ${filename}`);
-        return dir;
-    }
+  if (filename) {
+    await exec(`cd ${dir} && tar -zxvf ${filename}`);
+    return dir;
+  }
 
-    return null;
+  return null;
 }

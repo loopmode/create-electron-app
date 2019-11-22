@@ -4,6 +4,15 @@
   "description": "Template logic for filenames",
   "main": "lib/index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "clean": "rm -rf lib && rm -f .tsbuildinfo",
+    "rebuild": "yarn clean && yarn build",
+    "lint": "eslint src --ext .ts,.tsx"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:loopmode/create-electron-app.git",
@@ -21,14 +30,6 @@
     "yo",
     "generator"
   ],
-  "scripts": {
-    "build": "tsc",
-    "watch": "tsc --watch",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "clean": "rm -rf lib && rm -f .tsbuildinfo",
-    "rebuild": "yarn clean && yarn build"
-  },
   "dependencies": {
     "@types/ejs": "^2.6.3",
     "@types/fs-extra": "^8.0.0",

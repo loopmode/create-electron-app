@@ -37,7 +37,7 @@ function initOptions(generator) {
     });
 }
 exports.initOptions = initOptions;
-function getQuestions(values, verbose) {
+function getQuestions(values) {
     const typeMap = {
         Boolean: 'confirm'
     };

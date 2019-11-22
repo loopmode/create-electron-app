@@ -5,7 +5,7 @@ import { ParsedPath } from 'gulp-rename';
 import { normalizeSyntax } from './normalize';
 
 export interface RenderedPath extends ParsedPath {
-    ignore: boolean;
+  ignore: boolean;
 }
 
 /**
@@ -17,58 +17,58 @@ export interface RenderedPath extends ParsedPath {
  * @param options - EJS rendering options
  */
 export function renderPath(
-    candidate: string,
-    context: Record<string, unknown>,
-    options: Record<string, unknown> = {}
+  candidate: string,
+  context: Record<string, unknown>,
+  options: Record<string, unknown> = {}
 ): RenderedPath {
-    const original = parsePath(candidate);
-    const rendered = ejs.render(normalizeSyntax(candidate), context, options);
-    const parsed = parsePath(rendered);
-    const ignore = isFalsy(parsed);
+  const original = parsePath(candidate);
+  const rendered = ejs.render(normalizeSyntax(candidate), context, options);
+  const parsed = parsePath(rendered);
+  const ignore = isFalsy(parsed);
 
-    return { ignore, ...(ignore ? original : parsed) };
+  return { ignore, ...(ignore ? original : parsed) };
 }
 
 export function isFalsy(path: ParsedPath): boolean {
-    return ['false', 'undefined', 'null', '0'].some(value => {
-        if (path.dirname) {
-            if (path.dirname === value) {
-                return true;
-            }
-            if (path.dirname.includes(`/${value}`) || path.dirname.includes(`\\${value}`)) {
-                return true;
-            }
-        }
-        if (path.basename === value) {
-            return true;
-        }
-        return false;
-    });
+  return ['false', 'undefined', 'null', '0'].some(value => {
+    if (path.dirname) {
+      if (path.dirname === value) {
+        return true;
+      }
+      if (path.dirname.includes(`/${value}`) || path.dirname.includes(`\\${value}`)) {
+        return true;
+      }
+    }
+    if (path.basename === value) {
+      return true;
+    }
+    return false;
+  });
 
-    // if (falsyValues.some(falsyValue => {
+  // if (falsyValues.some(falsyValue => {
 
-    //     if (path.dirname && path.dirname.includes(`${Path.sep}${falsyValue}${Path.sep}`))) {
-    //         return true;
-    //     }
-    //     if (path.basename && path.basename.endsWith(falsyValue)) {
-    //         return true;
-    //     }
-    // }) {
-    //     return false;
-    // }
-    // if (falsyValues)
-    // return value ? falsyValues.some(falsyValue => value.endsWith(falsyValue)) : false;
+  //     if (path.dirname && path.dirname.includes(`${Path.sep}${falsyValue}${Path.sep}`))) {
+  //         return true;
+  //     }
+  //     if (path.basename && path.basename.endsWith(falsyValue)) {
+  //         return true;
+  //     }
+  // }) {
+  //     return false;
+  // }
+  // if (falsyValues)
+  // return value ? falsyValues.some(falsyValue => value.endsWith(falsyValue)) : false;
 }
 
 // copied internal function from gulp-rename
 export function parsePath(path: string): ParsedPath {
-    const extname = Path.extname(path);
-    const dirname = Path.dirname(path);
-    const basename = Path.basename(path, extname);
+  const extname = Path.extname(path);
+  const dirname = Path.dirname(path);
+  const basename = Path.basename(path, extname);
 
-    return {
-        dirname,
-        basename,
-        extname
-    };
+  return {
+    dirname,
+    basename,
+    extname
+  };
 }
