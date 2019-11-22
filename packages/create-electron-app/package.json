@@ -1,6 +1,6 @@
 {
   "name": "@loopmode/create-electron-app",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "main": "lib/index.js",
   "bin": "lib/index.js",
   "license": "MIT",
@@ -25,7 +25,7 @@
     "webpack"
   ],
   "dependencies": {
-    "@loopmode/generator-electron-app": "^0.3.6"
+    "@loopmode/generator-electron-app": "^0.3.7"
   },
   "gitHead": "5991ea486315401838eea5ddbacab695b8c3137e"
 }
