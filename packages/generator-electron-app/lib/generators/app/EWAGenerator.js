@@ -74,18 +74,25 @@ class EWAGenerator extends yeoman_generator_1.default {
         });
     }
     install() {
-        const { install, yarn } = this.props;
-        if (install) {
-            if (yarn) {
-                this.yarnInstall();
+        return __awaiter(this, void 0, void 0, function* () {
+            const props = this.props;
+            console.log('>> props.install', props.install, props);
+            if (props.install) {
+                if (props.yarn) {
+                    this.yarnInstall();
+                }
+                else {
+                    this.npmInstall();
+                }
             }
-            else {
-                this.npmInstall();
+            if (props.git) {
+                const done = this.async();
+                this.spawnCommand('git', ['init'], { cwd: this.destinationPath() }).on('close', done);
             }
-        }
+        });
     }
     end() {
-        const props = this.props || {};
+        const props = this.props;
         const messages = [
             'All right!',
             'Your project was created.',

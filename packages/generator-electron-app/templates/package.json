@@ -14,8 +14,7 @@
   },
   "dependencies": {<%if (react) { %><%if (typescript) { %>
     "@types/react": "^16.8.6",
-    "@types/react-dom": "^16.8.6",
-    "@types/react-hot-loader": "^4.1.0",<% } else { %>
+    "@types/react-dom": "^16.8.6",<% } else { %>
     "prop-types": "^15.7.2",<% } %>
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

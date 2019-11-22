@@ -25,6 +25,7 @@ export interface EWAGeneratorOptions {
     verbose?: boolean;
     install?: boolean;
     yarn?: boolean;
+    git?: boolean;
     // pre-processors
     typescript?: boolean;
     eslint?: boolean;

@@ -95,19 +95,24 @@ export default class EWAGenerator extends Generator {
         );
     }
 
-    install() {
-        const { install, yarn } = this.props as EWAGeneratorOptions;
-        if (install) {
-            if (yarn) {
+    async install() {
+        const props = this.props!;
+        console.log('>> props.install', props.install, props);
+        if (props.install) {
+            if (props.yarn) {
                 this.yarnInstall();
             } else {
                 this.npmInstall();
             }
         }
+        if (props.git) {
+            const done = this.async();
+            this.spawnCommand('git', ['init'], { cwd: this.destinationPath() }).on('close', done);
+        }
     }
 
     end() {
-        const props = this.props || {};
+        const props = this.props!;
         const messages = [
             'All right!',
             'Your project was created.',

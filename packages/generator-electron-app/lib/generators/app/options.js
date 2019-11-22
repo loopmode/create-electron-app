@@ -29,6 +29,13 @@ exports.options = [
         description: 'yarn: Use yarn instead of npm?'
     },
     {
+        name: 'git',
+        alias: 'g',
+        default: false,
+        type: Boolean,
+        description: 'git: Initialize git repository after setup?'
+    },
+    {
         name: 'eslint',
         default: true,
         type: Boolean,
