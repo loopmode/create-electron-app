@@ -1,5 +1,6 @@
 {
   "typescript.validate.enable": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "files.associations": {
     "**/templates/**/*.*": "plaintext"
@@ -9,5 +10,6 @@
     "javascriptreact",
     "typescript",
     "typescriptreact"
-  ]
+  ],
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }
