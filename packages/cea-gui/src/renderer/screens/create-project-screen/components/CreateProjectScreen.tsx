@@ -8,7 +8,7 @@ import { SectionFrameworks } from './SectionFrameworks';
 import { SectionPreprocessors } from './SectionPreprocessors';
 import { SectionMisc } from './SectionMisc';
 
-import { XTerminal } from 'renderer/components/xterminal/xterminal';
+import { XTerminal } from '@loopmode/xpty';
 
 import { FormValueTypes, FormSchema } from '../schema';
 import { useRunner } from '../runner';
