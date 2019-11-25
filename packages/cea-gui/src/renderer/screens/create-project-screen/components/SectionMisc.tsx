@@ -9,5 +9,10 @@ export const SectionMisc = () => (
       <CheckInput type="checkbox" name="nunjucks" label="Nunjucks templates" />
       <CheckInput type="checkbox" name="notifications" label="Webpack build notifications" />
     </FormField>
+    <FormField>
+      <CheckInput type="checkbox" name="install" label="Install dependencies" />
+      <CheckInput type="checkbox" name="yarn" label="Use yarn" />
+      <CheckInput type="checkbox" name="git" label="Initialize GIT" />
+    </FormField>
   </>
 );

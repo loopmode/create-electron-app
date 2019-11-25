@@ -1,20 +1,21 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
-
 import { hot } from 'react-hot-loader';
+
+import { XTerminal, usePty } from '@loopmode/xpty';
 
 import { SectionGeneral } from './SectionGeneral';
 import { SectionFrameworks } from './SectionFrameworks';
 import { SectionPreprocessors } from './SectionPreprocessors';
 import { SectionMisc } from './SectionMisc';
 
-import { XTerminal } from '@loopmode/xpty';
-
 import { FormValueTypes, FormSchema } from '../schema';
-import { useRunner } from '../runner';
+
 import { Screen } from 'renderer/components/screen/Screen';
 import { NavLink } from 'renderer/components/nav-link/NavLink';
 import { CaretIcon } from 'renderer/components/caret-icon/CaretIcon';
+
+import { createCLICommand } from '../utils';
 
 const initialValues: FormValueTypes = {
   cwd: '',
@@ -30,11 +31,20 @@ const initialValues: FormValueTypes = {
 
   ejs: false,
   nunjucks: false,
-  notifications: true
+  notifications: true,
+
+  install: false,
+  yarn: true,
+  git: false
 };
 
 export const CreateProjectScreen: React.FC<{}> = () => {
-  const { ptyProcess, execute } = useRunner();
+  const { pty, execute } = usePty();
+
+  const { current: handleSubmit } = React.useRef(({ cwd, ...values }: FormValueTypes) => {
+    const command = createCLICommand(values);
+    execute(command, { cwd });
+  });
 
   return (
     <Screen className="CreateProjectScreen">
@@ -42,7 +52,7 @@ export const CreateProjectScreen: React.FC<{}> = () => {
         <CaretIcon dir="left" className="mr-0" /> Back
       </NavLink.Button>
       <h2>Create electron-webpack app</h2>
-      <Formik initialValues={initialValues} onSubmit={execute} validationSchema={FormSchema}>
+      <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={FormSchema}>
         {({ errors, touched }) => (
           <Form>
             <SectionGeneral errors={errors} touched={touched} />
@@ -54,7 +64,7 @@ export const CreateProjectScreen: React.FC<{}> = () => {
                 Create
               </button>
             </div>
-            <XTerminal readOnly={process.env.NODE_ENV === 'production'} ptyProcess={ptyProcess} />
+            <XTerminal readOnly={process.env.NODE_ENV === 'production'} pty={pty} />
           </Form>
         )}
       </Formik>

@@ -1666,10 +1666,10 @@
   resolved "https://registry.npmjs.org/@loopmode/scss-variate/-/scss-variate-1.0.1.tgz#aa3d9787634f78f28833e9d2d627c3946d36e163"
   integrity sha512-Yo4ZXbRPY0RlWr1TLU9JotpvDKx6m2Nl0FaO07OGeHBwtOFf7qmqNmOpZqs+yVTXsJCAa73NbeZYWgEJAOxpOw==
 
-"@loopmode/xpty@^0.0.10":
-  version "0.0.10"
-  resolved "https://registry.npmjs.org/@loopmode/xpty/-/xpty-0.0.10.tgz#6d7dcba5f688c711ae32e042ed5b7015b4c5fc7e"
-  integrity sha512-9484Iemx/ZxPUHNSwsXAGskEembKaOOf1Mvn99cFPaAn/segRLtmtLuZvuE6q+85XdDFpyjXVygqjBiVJRsonA==
+"@loopmode/xpty@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.npmjs.org/@loopmode/xpty/-/xpty-0.4.0.tgz#d1d5b6fd185ec175b969f992d45e4abc7f8093ae"
+  integrity sha512-CTnncn5sVLbSM1yKAe9YRDIkDQIrD6wa5lNq+jp1hesITdjrDYKCCqNKwDE3jdV/YLN08SSMD4HihB4I7FOovQ==
   dependencies:
     classnames "^2.2.6"
     node-pty "^0.9.0"

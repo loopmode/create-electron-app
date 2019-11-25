@@ -17,6 +17,10 @@ export interface FormValueTypes {
   nunjucks: boolean;
   notifications: true;
 
+  install: boolean;
+  yarn: boolean;
+  git: boolean;
+
   env?: KeyValueItem[];
 }
 
