@@ -1,7 +1,7 @@
 import * as Yup from 'yup';
 import { KeyValueItem } from '@loopmode/xpty';
 
-export interface FormValueTypes {
+export interface FormValues {
   cwd: string;
   packageName: string;
   packageScope: string;
@@ -29,7 +29,7 @@ const alphanumeric = {
   message: 'Must contain only alphanumeric characters, dashes or underscores'
 };
 
-export const FormSchema = Yup.object().shape({
+export const ValidationSchema = Yup.object().shape({
   cwd: Yup.string().required('Required'),
   packageName: Yup.string()
     .required('Required')

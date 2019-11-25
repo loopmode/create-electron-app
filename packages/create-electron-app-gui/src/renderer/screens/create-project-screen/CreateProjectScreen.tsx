@@ -9,7 +9,7 @@ import { SectionFrameworks } from './sections/SectionFrameworks';
 import { SectionPreprocessors } from './sections/SectionPreprocessors';
 import { SectionMisc } from './sections/SectionMisc';
 
-import { FormValueTypes, FormSchema } from './schema';
+import { FormValues, ValidationSchema } from './schema';
 
 import { Screen } from 'renderer/components/screen/Screen';
 import { NavLink } from 'renderer/components/nav-link/NavLink';
@@ -19,9 +19,9 @@ import { createCLICommand } from './utils';
 
 import ElectronStore from 'electron-store';
 
-const store = new ElectronStore<{ formValues: FormValueTypes }>();
+const store = new ElectronStore<{ formValues: FormValues }>();
 
-const defaultInitialValues: FormValueTypes = {
+const defaultInitialValues: FormValues = {
   cwd: '',
   packageName: '',
   packageScope: '',
@@ -47,7 +47,7 @@ const initialValues = store.get('formValues', defaultInitialValues);
 export const CreateProjectScreen: React.FC<{}> = () => {
   const { pty, execute } = usePty();
 
-  const { current: handleSubmit } = React.useRef(({ cwd, ...values }: FormValueTypes) => {
+  const { current: handleSubmit } = React.useRef(({ cwd, ...values }: FormValues) => {
     const command = createCLICommand(values);
     execute(command, { cwd });
     store.set('formValues', { cwd, ...values });
@@ -59,7 +59,7 @@ export const CreateProjectScreen: React.FC<{}> = () => {
         <CaretIcon dir="left" className="mr-0" /> Back
       </NavLink.Button>
       <h2>Create electron-webpack app</h2>
-      <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={FormSchema}>
+      <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={ValidationSchema}>
         {({ errors, touched }) => (
           <Form>
             <SectionGeneral errors={errors} touched={touched} />
