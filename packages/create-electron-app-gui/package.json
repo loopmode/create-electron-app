@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@loopmode/cea-gui",
+  "name": "@loopmode/create-electron-app-gui",
   "version": "0.0.3",
   "license": "MIT",
   "scripts": {
