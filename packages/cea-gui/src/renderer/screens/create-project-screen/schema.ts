@@ -1,5 +1,5 @@
 import * as Yup from 'yup';
-import { KeyValueItem } from 'renderer/components/xterminal/types';
+import { KeyValueItem } from '@loopmode/xpty';
 
 export interface FormValueTypes {
   cwd: string;

@@ -17,7 +17,11 @@ import { CaretIcon } from 'renderer/components/caret-icon/CaretIcon';
 
 import { createCLICommand } from '../utils';
 
-const initialValues: FormValueTypes = {
+import ElectronStore from 'electron-store';
+
+const store = new ElectronStore<{ formValues: FormValueTypes }>();
+
+const defaultInitialValues: FormValueTypes = {
   cwd: '',
   packageName: '',
   packageScope: '',
@@ -38,12 +42,15 @@ const initialValues: FormValueTypes = {
   git: false
 };
 
+const initialValues = store.get('formValues', defaultInitialValues);
+
 export const CreateProjectScreen: React.FC<{}> = () => {
   const { pty, execute } = usePty();
 
   const { current: handleSubmit } = React.useRef(({ cwd, ...values }: FormValueTypes) => {
     const command = createCLICommand(values);
     execute(command, { cwd });
+    store.set('formValues', { cwd, ...values });
   });
 
   return (

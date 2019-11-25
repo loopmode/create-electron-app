@@ -1,10 +1,10 @@
 import { joinName } from '@loopmode/generator-electron-app/lib/utils/packageUtils';
-import { FormValueTypes } from './schema';
-
 import { options } from '@loopmode/generator-electron-app/lib/generators/app/options';
 
-export function createCLICommand(values: FormValueTypes, ignoredKeys?: string[]) {
-  const { framework, packageName, packageScope, ...flags } = values;
+import { FormValueTypes } from './schema';
+
+export function createCLICommand(values: Partial<FormValueTypes>, ignoredKeys?: string[]) {
+  const { framework, packageName = '', packageScope = '', ...flags } = values;
   if (framework) {
     Object.assign(flags, { [framework]: true });
   }
