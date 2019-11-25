@@ -1,1 +1,1 @@
-export { default as CreateProjectScreen } from './components/CreateProjectScreen';
+export { default as CreateProjectScreen } from './CreateProjectScreen';
