@@ -97,7 +97,6 @@ export default class EWAGenerator extends Generator {
 
   async install() {
     const props = this.props!;
-    console.log('>> props.install', props.install, props);
     if (props.install) {
       if (props.yarn) {
         this.yarnInstall();

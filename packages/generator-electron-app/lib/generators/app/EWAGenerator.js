@@ -76,7 +76,6 @@ class EWAGenerator extends yeoman_generator_1.default {
     install() {
         return __awaiter(this, void 0, void 0, function* () {
             const props = this.props;
-            console.log('>> props.install', props.install, props);
             if (props.install) {
                 if (props.yarn) {
                     this.yarnInstall();
