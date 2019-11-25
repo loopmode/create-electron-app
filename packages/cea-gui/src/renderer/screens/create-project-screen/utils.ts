@@ -1,6 +1,7 @@
+import path from 'path';
 import { joinName } from '@loopmode/generator-electron-app/lib/utils/packageUtils';
 import { options } from '@loopmode/generator-electron-app/lib/generators/app/options';
-
+import findWorkspaceRoot from 'find-yarn-workspace-root';
 import { FormValues } from './schema';
 
 export function createCLICommand(values: Partial<FormValues>, ignoredKeys?: string[]) {
@@ -24,6 +25,18 @@ export function createCLICommand(values: Partial<FormValues>, ignoredKeys?: stri
     ['--yes']
   );
 
-  const name = joinName({ packageName, packageScope });
-  return `yarn create @loopmode/electron-app ${name} ${args.join(' ')}`;
+  const projectName = joinName({ packageName, packageScope });
+
+  if (process.env.NODE_ENV === 'development') {
+    const workspaceRoot = findWorkspaceRoot();
+    if (workspaceRoot) {
+      const scriptPath = path.resolve(workspaceRoot, 'packages/create-electron-app/lib/index.js');
+      return `node ${scriptPath.replace(/\\/g, '/')} ${projectName} ${args.join(' ')}`;
+    } else {
+      console.warn('>> unable to find workspace root');
+    }
+  }
+
+  const baseCommand = values.yarn ? 'yarn create' : 'npm init';
+  return `${baseCommand} @loopmode/electron-app ${projectName} ${args.join(' ')}`;
 }

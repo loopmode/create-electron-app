@@ -19,6 +19,7 @@ const yosay_1 = __importDefault(require("yosay"));
 const binaryUtils_1 = require("../../utils/binaryUtils");
 const questionsUtils_1 = require("../../utils/questionsUtils");
 const yo_transform_filenames_1 = require("@loopmode/yo-transform-filenames");
+const doneMessage_1 = require("../../utils/doneMessage");
 const { name, version } = require('../../../package.json');
 if (process.env.NODE_ENV === 'development')
     console.log('EWAGenerator');
@@ -102,6 +103,7 @@ class EWAGenerator extends yeoman_generator_1.default {
         ];
         const message = messages.filter(Boolean).join('\n');
         this.log(yosay_1.default(message));
+        this.log(doneMessage_1.doneMessage);
     }
 }
 exports.default = EWAGenerator;

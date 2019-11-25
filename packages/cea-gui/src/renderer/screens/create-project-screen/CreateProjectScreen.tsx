@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
 import { hot } from 'react-hot-loader';
+import cx from 'classnames';
 
 import { XTerminal, usePty } from '@loopmode/xpty';
 
@@ -16,10 +17,30 @@ import { SectionGeneral } from './sections/SectionGeneral';
 import { SectionFrameworks } from './sections/SectionFrameworks';
 import { SectionPreprocessors } from './sections/SectionPreprocessors';
 import { SectionMisc } from './sections/SectionMisc';
+import { ButtonGroup } from 'renderer/components/button-group/button-group';
+
+import { doneMessage } from '@loopmode/generator-electron-app/lib/utils/doneMessage';
+import { IPty } from 'node-pty';
+
+function useDoneCallback(pty: IPty | null, callback: () => void) {
+  React.useEffect(() => {
+    if (!pty) {
+      return () => null;
+    }
+    const { dispose } = pty.onData(data => {
+      if (data.includes(doneMessage)) {
+        dispose();
+        setTimeout(callback);
+      }
+    });
+    return () => dispose();
+  }, [pty, callback]);
+}
 
 export const CreateProjectScreen: React.FC<{}> = () => {
-  const { pty, execute } = usePty();
+  const { pty, execute, abort, kill } = usePty();
 
+  useDoneCallback(pty, () => console.info('DONE!'));
   const { current: handleSubmit } = React.useRef((formValues: FormValues) => {
     const { cwd, ...values } = formValues;
     persistInitialValues({ cwd, ...values });
@@ -41,11 +62,18 @@ export const CreateProjectScreen: React.FC<{}> = () => {
             <SectionFrameworks />
             <SectionPreprocessors />
             <SectionMisc />
-            <div className="is-flex mb-2">
-              <button className="button is-success is-pulled-right" type="submit">
+            <ButtonGroup className="mt-2 mb-1" right>
+              <button className={cx('button is-danger', { 'is-hidden': !pty })} type="button" onClick={() => kill()}>
+                Kill
+              </button>
+              <span className="is-flex-1" />
+              <button className={cx('button is-success', { 'is-hidden': pty })} type="submit">
                 Create
               </button>
-            </div>
+              <button className={cx('button is-warning', { 'is-hidden': !pty })} type="button" onClick={() => abort()}>
+                Abort
+              </button>
+            </ButtonGroup>
             <XTerminal readOnly={process.env.NODE_ENV === 'production'} pty={pty} />
           </Form>
         )}

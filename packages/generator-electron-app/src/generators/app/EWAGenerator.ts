@@ -9,6 +9,7 @@ import { getBinaryFiles, getBinaryIgnoreGlobs } from '../../utils/binaryUtils';
 import { initOptions, addComputedOptions, getAnswers, applyImplicitOptions } from '../../utils/questionsUtils';
 
 import { createTransformStream, createIgnoreGlobs, getFilePath, renderPath } from '@loopmode/yo-transform-filenames';
+import { doneMessage } from '../../utils/doneMessage';
 const { name, version } = require('../../../package.json');
 
 if (process.env.NODE_ENV === 'development') console.log('EWAGenerator');
@@ -123,5 +124,7 @@ export default class EWAGenerator extends Generator {
     const message = messages.filter(Boolean).join('\n');
 
     this.log(yosay(message));
+
+    this.log(doneMessage);
   }
 }
