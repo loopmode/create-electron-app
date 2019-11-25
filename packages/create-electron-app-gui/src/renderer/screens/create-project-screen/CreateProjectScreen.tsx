@@ -4,53 +4,28 @@ import { hot } from 'react-hot-loader';
 
 import { XTerminal, usePty } from '@loopmode/xpty';
 
+import { Screen } from 'renderer/components/screen/Screen';
+import { NavLink } from 'renderer/components/nav-link/NavLink';
+import { CaretIcon } from 'renderer/components/caret-icon/CaretIcon';
+
+import { initialValues, persistInitialValues } from './initial-values';
+import { createCLICommand } from './utils';
+import { FormValues, ValidationSchema } from './schema';
+
 import { SectionGeneral } from './sections/SectionGeneral';
 import { SectionFrameworks } from './sections/SectionFrameworks';
 import { SectionPreprocessors } from './sections/SectionPreprocessors';
 import { SectionMisc } from './sections/SectionMisc';
 
-import { FormValues, ValidationSchema } from './schema';
-
-import { Screen } from 'renderer/components/screen/Screen';
-import { NavLink } from 'renderer/components/nav-link/NavLink';
-import { CaretIcon } from 'renderer/components/caret-icon/CaretIcon';
-
-import { createCLICommand } from './utils';
-
-import ElectronStore from 'electron-store';
-
-const store = new ElectronStore<{ formValues: FormValues }>();
-
-const defaultInitialValues: FormValues = {
-  cwd: '',
-  packageName: '',
-  packageScope: '',
-  framework: '',
-  typescript: false,
-
-  sass: false,
-  less: false,
-  eslint: true,
-  prettier: true,
-
-  ejs: false,
-  nunjucks: false,
-  notifications: true,
-
-  install: false,
-  yarn: true,
-  git: false
-};
-
-const initialValues = store.get('formValues', defaultInitialValues);
-
 export const CreateProjectScreen: React.FC<{}> = () => {
   const { pty, execute } = usePty();
 
-  const { current: handleSubmit } = React.useRef(({ cwd, ...values }: FormValues) => {
+  const { current: handleSubmit } = React.useRef((formValues: FormValues) => {
+    const { cwd, ...values } = formValues;
+    persistInitialValues({ cwd, ...values });
+
     const command = createCLICommand(values);
     execute(command, { cwd });
-    store.set('formValues', { cwd, ...values });
   });
 
   return (
