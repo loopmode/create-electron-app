@@ -34,3 +34,7 @@ html body #app .App {
     }
   }
 }
+
+form section + section {
+  margin-top: 2rem;
+}

@@ -4,10 +4,10 @@ import { hot } from 'react-hot-loader';
 
 import { XTerminal, usePty } from '@loopmode/xpty';
 
-import { SectionGeneral } from './components/SectionGeneral';
-import { SectionFrameworks } from './components/SectionFrameworks';
-import { SectionPreprocessors } from './components/SectionPreprocessors';
-import { SectionMisc } from './components/SectionMisc';
+import { SectionGeneral } from './sections/SectionGeneral';
+import { SectionFrameworks } from './sections/SectionFrameworks';
+import { SectionPreprocessors } from './sections/SectionPreprocessors';
+import { SectionMisc } from './sections/SectionMisc';
 
 import { FormValueTypes, FormSchema } from './schema';
 

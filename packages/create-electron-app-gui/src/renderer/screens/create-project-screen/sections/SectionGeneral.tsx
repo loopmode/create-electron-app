@@ -16,7 +16,7 @@ export const SectionGeneral: React.FC<{
   const [showMore, setShowMore] = React.useState(false);
   const getError = (name: keyof FormValueTypes) => (touched[name] ? errors[name] : undefined);
   return (
-    <>
+    <section>
       <h5>General</h5>
       <FormField label={'Project location'} error={getError('cwd')}>
         <FormikFileInput
@@ -48,6 +48,6 @@ export const SectionGeneral: React.FC<{
           </FormField>
         </>
       )}
-    </>
+    </section>
   );
 };
