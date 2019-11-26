@@ -1666,10 +1666,10 @@
   resolved "https://registry.npmjs.org/@loopmode/scss-variate/-/scss-variate-1.0.1.tgz#aa3d9787634f78f28833e9d2d627c3946d36e163"
   integrity sha512-Yo4ZXbRPY0RlWr1TLU9JotpvDKx6m2Nl0FaO07OGeHBwtOFf7qmqNmOpZqs+yVTXsJCAa73NbeZYWgEJAOxpOw==
 
-"@loopmode/xpty@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.npmjs.org/@loopmode/xpty/-/xpty-0.4.1.tgz#fb6ad661f9eaa7591a1701cbbda09827ee2c1bc6"
-  integrity sha512-xwcuN4htmL18z20BxCp8RpI6pp5jhjRzmzkxfDlUqdK+5er3fLSlev93LZ6Uy+rWCHmNkMgTrCWNyd/X3odmXw==
+"@loopmode/xpty@^0.4.2":
+  version "0.4.2"
+  resolved "https://registry.npmjs.org/@loopmode/xpty/-/xpty-0.4.2.tgz#70a4f700ef04f7728dd3474655a14dfee89ce224"
+  integrity sha512-4u4rLu1kUCwNIcSVdO2WmtCacEIQUU2IYGxIL9IqoTsne9VjETYkbZD9DFJaE1AyEN6Ptp61Lznf+/fke+xa9w==
   dependencies:
     classnames "^2.2.6"
     node-pty "^0.9.0"
@@ -5198,11 +5198,6 @@ espree@^6.1.2:
     acorn-jsx "^5.1.0"
     eslint-visitor-keys "^1.1.0"
 
-esprima@^2.6.0:
-  version "2.7.3"
-  resolved "https://registry.npmjs.org/esprima/-/esprima-2.7.3.tgz#96e3b70d5779f6ad49cd032673d1c312767ba581"
-  integrity sha1-luO3DVd59q1JzQMmc9HDEnZ7pYE=
-
 esprima@^3.1.3:
   version "3.1.3"
   resolved "https://registry.npmjs.org/esprima/-/esprima-3.1.3.tgz#fdca51cee6133895e3c88d535ce49dbff62a4633"
@@ -7564,21 +7559,13 @@ js-tokens@^3.0.2:
   resolved "https://registry.npmjs.org/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
   integrity sha1-mGbfOVECEw449/mWvOtlRDIJwls=
 
-js-yaml@^3.13.1:
+js-yaml@3.13.1, js-yaml@^3.13.1, js-yaml@~3.7.0:
   version "3.13.1"
   resolved "https://registry.npmjs.org/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
   integrity sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
-
-js-yaml@~3.7.0:
-  version "3.7.0"
-  resolved "https://registry.npmjs.org/js-yaml/-/js-yaml-3.7.0.tgz#5c967ddd837a9bfdca5f2de84253abe8a1c03b80"
-  integrity sha1-XJZ93YN6m/3KXy3oQlOr6KHAO4A=
-  dependencies:
-    argparse "^1.0.7"
-    esprima "^2.6.0"
 
 jsbn@~0.1.0:
   version "0.1.1"

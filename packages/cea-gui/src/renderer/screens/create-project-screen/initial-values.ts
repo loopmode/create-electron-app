@@ -1,7 +1,5 @@
-import ElectronStore from 'electron-store';
 import { FormValues } from './schema';
-
-const store = new ElectronStore<{ values: FormValues }>();
+import { store } from 'renderer/store';
 
 // these values are used the very first time.
 export const defaultInitialValues: FormValues = {
