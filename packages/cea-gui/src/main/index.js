@@ -39,6 +39,8 @@ function createMainWindow() {
     });
   });
 
+  window.removeMenu();
+
   return window;
 }
 

@@ -2,9 +2,11 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { hot } from 'react-hot-loader/root';
 import { HashRouter as Router, Route } from 'react-router-dom';
+
+import { CreateProjectScreen } from 'renderer/screens/create-project';
+import { HomeScreen } from 'renderer/screens/home';
+
 import staticPath from 'renderer/utils/static-path';
-import { CreateProjectScreen } from 'renderer/screens/create-project-screen';
-import { HomeScreen } from 'renderer/screens/home-screen/HomeScreen';
 
 const App: React.FC = () => (
   <div className="App">

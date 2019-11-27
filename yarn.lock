@@ -1666,10 +1666,10 @@
   resolved "https://registry.npmjs.org/@loopmode/scss-variate/-/scss-variate-1.0.1.tgz#aa3d9787634f78f28833e9d2d627c3946d36e163"
   integrity sha512-Yo4ZXbRPY0RlWr1TLU9JotpvDKx6m2Nl0FaO07OGeHBwtOFf7qmqNmOpZqs+yVTXsJCAa73NbeZYWgEJAOxpOw==
 
-"@loopmode/xpty@^0.4.2":
-  version "0.4.2"
-  resolved "https://registry.npmjs.org/@loopmode/xpty/-/xpty-0.4.2.tgz#70a4f700ef04f7728dd3474655a14dfee89ce224"
-  integrity sha512-4u4rLu1kUCwNIcSVdO2WmtCacEIQUU2IYGxIL9IqoTsne9VjETYkbZD9DFJaE1AyEN6Ptp61Lznf+/fke+xa9w==
+"@loopmode/xpty@^0.5.7":
+  version "0.5.7"
+  resolved "https://registry.npmjs.org/@loopmode/xpty/-/xpty-0.5.7.tgz#dedb834dec9d773e2951e548f40702f5f1c1b55b"
+  integrity sha512-n3pcXsN7fWvBx4f21ZZQbYjoSvXbRxp8DkbogC48PHurlT8Ji2rdcZ3w4uNFT0/pmHK5l2nrAZoGApH3wG9K4Q==
   dependencies:
     classnames "^2.2.6"
     node-pty "^0.9.0"
@@ -5695,7 +5695,7 @@ form-data@~2.3.2:
     combined-stream "^1.0.6"
     mime-types "^2.1.12"
 
-formik@^2.0.3:
+formik@^2.0.6:
   version "2.0.6"
   resolved "https://registry.npmjs.org/formik/-/formik-2.0.6.tgz#e22e3452399a69ad057ba9828ba8fb0d2319df53"
   integrity sha512-x2fC80v8AIrGgpxWrLqKaK9hdV8WX4OSLK+Fr5lclqExA59NCuxdB3WiuxJQc9/g043BmfTIuaILrV9Wq0MPVw==

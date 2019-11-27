@@ -15,7 +15,7 @@ export interface FormValues {
 
   ejs: boolean;
   nunjucks: boolean;
-  notifications: true;
+  notifications: boolean;
 
   install: boolean;
   yarn: boolean;

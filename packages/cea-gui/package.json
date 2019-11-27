@@ -15,16 +15,14 @@
     "js-yaml": "3.13.1"
   },
   "electronWebpack": {
-    "whiteListedModules": [
-      "react-hot-loader"
-    ],
+    "title": true,
     "renderer": {
       "webpackConfig": "webpack.renderer.config.js"
     }
   },
   "dependencies": {
     "@loopmode/scss-variate": "^1.0.1",
-    "@loopmode/xpty": "^0.4.1",
+    "@loopmode/xpty": "^0.5.7",
     "@types/classnames": "^2.2.9",
     "@types/react": "^16.8.6",
     "@types/react-dom": "^16.8.6",
@@ -39,7 +37,7 @@
     "electron-store": "^5.1.0",
     "eslint-config-prettier": "^6.5.0",
     "find-yarn-workspace-root": "^1.2.1",
-    "formik": "^2.0.3",
+    "formik": "^2.0.6",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",

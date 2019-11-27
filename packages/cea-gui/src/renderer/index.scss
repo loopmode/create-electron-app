@@ -6,23 +6,40 @@
 @import '~@loopmode/scss-variate';
 @import '~xterm/css/xterm.css';
 
-$sizes: (0, 0.75rem, 1.5rem, 3rem, auto);
+// create variations like mb-0 for margin-bottom: 0 etc
+$sizes: (0, 0.3rem, 0.75rem, 1.5rem, 3rem, auto);
 html body #app .App {
   @include variate(margin, $sizes);
   @include variate(padding, $sizes);
 }
 
-.is-v-centered {
+html {
+  overflow: auto;
+}
+
+html,
+body,
+#app,
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.is-vcentered {
   align-items: center;
 }
 .is-flex-1 {
   flex: 1;
 }
-.is-flex > .is-pulled-right {
-  float: none !important;
-  margin-left: auto;
+.is-unclickable {
+  cursor: default;
+  pointer-events: none;
 }
-
+.is-clickable {
+  cursor: pointer;
+}
 @for $i from 1 through 6 {
   h#{$i} {
     @extend .is-#{$i};
@@ -37,4 +54,9 @@ html body #app .App {
 
 form section + section {
   margin-top: 2rem;
+}
+
+.XTermView .notification {
+  border-radius: 0;
+  margin: 0;
 }

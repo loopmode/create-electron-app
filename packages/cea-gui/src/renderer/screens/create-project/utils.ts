@@ -2,7 +2,7 @@ import path from 'path';
 import { joinName } from '@loopmode/generator-electron-app/lib/utils/packageUtils';
 import { options } from '@loopmode/generator-electron-app/lib/generators/app/options';
 import findWorkspaceRoot from 'find-yarn-workspace-root';
-import { FormValues } from './schema';
+import { FormValues } from './form-schema';
 
 export function createCLICommand(values: Partial<FormValues>, ignoredKeys?: string[]) {
   const { framework, packageName = '', packageScope = '', ...flags } = values;
